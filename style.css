@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after{
+box-sizing: border-box;
+}
+html,body{  
+width: 100%;
+margin: 0;
+}
+
+@font-face {
+    font-family: 'comic';
+    src:url('./font/comic.woff2') format('woff2'),
+        url('./font/comic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav img {
+    width: 120px;
+}
+
+a{
+    font-size: 2.125rem;
+    width: 255px;
+    font-family: comic;
+    text-align: center;
+    color: #1E3C1D;
+    font-weight: bold;
+    align-self: center;
+    transition: 0.8s;
+    border-radius: 25px;
+    margin:5px auto;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #AAE273;
+    background-color: #1E3C1D;
+}
+
+nav{
+    display: flex;
+    background-color: #AAE273;
+}
+
+.js-photos {
+    display: flex;
+    position: relative;
+    transition: 1s;
+    left: -1280px;
+}
+
+.js-slider {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+}
