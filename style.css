@@ -34,9 +34,9 @@ margin: 0;
 }
 
 @font-face {
-    font-family: 'comic';
-    src:url('./font/comic.woff2') format('woff2'),
-        url('./font/comic.woff') format('woff');
+    font-family: 'Mynerve';
+    src:url('./font/Mynerve-Regular.woff2') format('woff2'),
+        url('./font/Mynerve-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -47,7 +47,7 @@ nav img {
 
 a{
     font-size: 1.5rem;
-    font-family: comic;
+    font-family: Mynerve;
     text-align: center;
     color: #1E3C1D;
     font-weight: bold;
