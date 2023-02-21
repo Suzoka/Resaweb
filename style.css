@@ -1,3 +1,28 @@
+@keyframes slidy {
+    0% {
+      left: 0%;
+    }
+    25% {
+      left: 0%;
+    }
+    30% {
+      left: -100%;
+    }
+    55% {
+      left: -100%;
+    }
+    60% {
+      left: -200%;
+    }
+    95% {
+      left: -200%;
+    }
+    100% {
+      left: -300%;
+    }
+  }
+
+
 *,
 *::before,
 *::after{
@@ -46,22 +71,32 @@ nav{
     background-color: #AAE273;
 }
 
-.js-photos {
-    display: flex;
-    position: relative;
-    transition: 1s;
-    left: -1280px;
-    border: solid red;
-}
 
-.js-slider {
+  div#captioned-gallery {
     width: 100%;
-    margin: 0 auto;
     overflow: hidden;
+  }
+  div.slider {
     position: relative;
-    border: solid blue;
-}
-
-.js-photo{
-    border: solid black;
-}
+    width: 500%;
+    font-size: 0; /* ? pourquoi ça créer une marge dégueulasse entre les photos quand je l'enlève ??? */
+    animation: 15s slidy infinite;
+  }
+  div.slider div {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    position: inherit;
+  }
+  div.slider img {
+    width: 100%;
+    height: auto;
+  }
+  div.slider div figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.6rem;
+  }
+  
