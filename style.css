@@ -1,102 +1,140 @@
 @keyframes slidy {
-    0% {
-      left: 0%;
-    }
-    25% {
-      left: 0%;
-    }
-    30% {
-      left: -100%;
-    }
-    55% {
-      left: -100%;
-    }
-    60% {
-      left: -200%;
-    }
-    95% {
-      left: -200%;
-    }
-    100% {
-      left: -300%;
-    }
+  0% {
+    left: 0%;
   }
+
+  25% {
+    left: 0%;
+  }
+
+  30% {
+    left: -100%;
+  }
+
+  55% {
+    left: -100%;
+  }
+
+  60% {
+    left: -200%;
+  }
+
+  95% {
+    left: -200%;
+  }
+
+  100% {
+    left: -300%;
+  }
+}
 
 
 *,
 *::before,
-*::after{
-box-sizing: border-box;
+*::after {
+  box-sizing: border-box;
 }
-html,body{  
-width: 100%;
-margin: 0;
+
+html,
+body {
+  width: 100%;
+  margin: 0;
 }
 
 @font-face {
-    font-family: 'Mynerve';
-    src:url('./font/Mynerve-Regular.woff2') format('woff2'),
-        url('./font/Mynerve-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Mynerve';
+  src: url('./font/Mynerve-Regular.woff2') format('woff2'),
+    url('./font/Mynerve-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 nav img {
-    width: 120px;
+  width: 80px;
 }
 
-a{
-    font-size: 1.5rem;
-    font-family: Mynerve;
-    text-align: center;
-    color: #1E3C1D;
-    font-weight: bold;
-    align-self: center;
-    transition: 0.8s;
-    border-radius: 10px;
-    margin:5px auto;
-    padding: 10px 15px;
-}
-a:hover{
-    cursor: pointer;
+a {
+  font-size: 1.5rem;
+  font-family: Mynerve;
+  text-align: center;
+  color: #1E3C1D;
+  font-weight: bold;
+  align-self: center;
+  transition: 0.8s;
+  border-radius: 10px;
+  margin: 5px auto;
+  padding: 10px 15px;
 }
 
-a:hover:not(.logo){
-    color: #AAE273;
-    background-color: #1E3C1D;
+a:hover {
+  cursor: pointer;
 }
 
-nav{
-    display: flex;
-    background-color: #AAE273;
+a:hover:not(.logo) {
+  color: #AAE273;
+  background-color: #1E3C1D;
+}
+
+nav {
+  display: flex;
+  background-color: #AAE273;
 }
 
 
-  div#captioned-gallery {
-    width: 100%;
-    overflow: hidden;
+div#captioned-gallery {
+  width: 100%;
+  overflow: hidden;
+}
+
+div.slider {
+  position: relative;
+  width: 500%;
+  font-size: 0;
+  /* ? pourquoi ça créer une marge dégueulasse entre les photos quand je l'enlève ??? */
+  animation: 15s slidy infinite;
+}
+
+div.slider div {
+  width: 20%;
+  height: auto;
+  display: inline-block;
+  position: inherit;
+}
+
+div.slider img {
+  width: 100%;
+  height: auto;
+}
+
+div.slider div figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+
+.titre {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: 15.625vw;
+  font-size: 4vw;
+  color: #AAE273;
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 3px;
+  padding: 1px 10px;
+  align-self: center;
+}
+
+@media screen and (max-width: 795px) {
+  .titre {
+    top: 20vw;
   }
-  div.slider {
-    position: relative;
-    width: 500%;
-    font-size: 0; /* ? pourquoi ça créer une marge dégueulasse entre les photos quand je l'enlève ??? */
-    animation: 15s slidy infinite;
+}
+
+@media screen and (min-width: 1500px) {
+  .titre {
+    top: 12vw;
   }
-  div.slider div {
-    width: 20%;
-    height: auto;
-    display: inline-block;
-    position: inherit;
-  }
-  div.slider img {
-    width: 100%;
-    height: auto;
-  }
-  div.slider div figcaption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 2rem;
-    padding: 0.6rem;
-  }
-  
+}
