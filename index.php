@@ -15,16 +15,16 @@
         <div id="captioned-gallery">
             <div class="slider">
                 <div>
-                    <img src="./photos/images recadrés/photo-page-accueil-1.jpg" alt>
+                    <img src="./photos/photo-page-accueil-1.jpg" alt>
                 </div>
                 <div>
-                    <img src="./photos/images recadrés/photo-page-accueil-2.jpg" alt>
+                    <img src="./photos/photo-page-accueil-2.jpg" alt>
                 </div>
                 <div>
-                    <img src="./photos/images recadrés/photo-page-accueil-3.jpg" alt>
+                    <img src="./photos/photo-page-accueil-3.jpg" alt>
                 </div>
                 <div>
-                    <img src="./photos/images recadrés/photo-page-accueil-1.jpg" alt>
+                    <img src="./photos/photo-page-accueil-1.jpg" alt>
                 </div>
             </div>
         </div>
