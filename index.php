@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <nav><a class="logo"><img src="./photos/filigrane.svg" alt="Accueil"></a><a>Le concept</a><a>Commandez votre panier !</a><a>Qui sommes nous ?</a></nav>
+        <nav><a class="logo"><img src="./photos/filigrane.svg" alt="Accueil"></a><a>Le concept</a><a>Commandez votre panier&nbsp;!</a><a>Qui sommes nous&nbsp;?</a></nav>
         <div id="captioned-gallery">
             <div class="slider">
                 <div>
