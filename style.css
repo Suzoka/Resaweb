@@ -39,6 +39,7 @@ html,
 body {
   width: 100%;
   margin: 0;
+  font-family: Mynerve;
 }
 
 @font-face {
@@ -55,7 +56,6 @@ nav img {
 
 a {
   font-size: 1.5rem;
-  font-family: Mynerve;
   text-align: center;
   color: #1E3C1D;
   font-weight: bold;
@@ -78,10 +78,13 @@ a:hover:not(.logo) {
 nav {
   display: flex;
   background-color: #AAE273;
+  position: fixed;
+  z-index: 300;
+  width: 100%;
 }
 
 
-div#captioned-gallery {
+div.captioned-gallery {
   width: 100%;
   overflow: hidden;
 }
@@ -114,7 +117,7 @@ div.slider div figcaption {
   padding: 0.6rem;
 }
 
-.titre {
+.enTete {
   position: absolute;
   left: 50%;
   transform: translatex(-50%);
@@ -127,14 +130,24 @@ div.slider div figcaption {
   align-self: center;
 }
 
+.titre{
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+
 @media screen and (max-width: 795px) {
-  .titre {
+  .enTete {
     top: 20vw;
   }
 }
 
 @media screen and (min-width: 1500px) {
-  .titre {
+  .enTete {
     top: 12vw;
   }
 }
