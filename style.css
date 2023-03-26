@@ -81,6 +81,7 @@ nav {
   position: fixed;
   z-index: 300;
   width: 100%;
+  overflow: hidden;
 }
 
 
@@ -130,7 +131,7 @@ div.slider div figcaption {
   align-self: center;
 }
 
-.titre{
+.titre {
   margin-right: auto;
   margin-left: auto;
   width: 300px;

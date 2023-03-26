@@ -18,6 +18,8 @@
             <a>Qui sommes nous&nbsp;?</a>
         </nav>
     </header>
+
+    <script src="./script/nav.js"></script>
 </body>
 
 </html>
