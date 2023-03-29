@@ -11,14 +11,15 @@
 
 <body>
     <header>
-        <nav>
-            <a href="./index.php" class="logo"><img src="./photos/filigrane.svg" alt="Accueil"></a>
+        <a href="#navigation" class="skip-link">Aller à la barre de navigation</a>
+        <a href="#contenu" class="skip-link">Aller au contenu</a>
+        <nav id="navigation">
+            <a href="./index.php" class="logo"><img src="./photos/logo.svg" alt="Accueil"></a>
             <a href="./concept.php">Le concept</a>
             <a>Commandez votre panier&nbsp;!</a>
             <a>Qui sommes nous&nbsp;?</a>
         </nav>
-
-        <div class="captioned-gallery">
+        <div class="captioned-gallery" id="top">
             <div class="slider">
                 <div>
                     <img src="./photos/photo-page-accueil-1.jpg" alt>
@@ -35,10 +36,15 @@
             </div>
         </div>
         </div>
-        <h1 class="enTete">Nom concept</h1>
+        <h1 class="enTete">Fructus et legumina</h1>
     </header>
 
-    <h1 class="titre">En ce moment dans vos panniers</h1>
+    <h1 class="titre" id="contenu">En ce moment dans vos panniers</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae et ex pariatur ratione neque quaerat sit dolores harum quasi, fugit quam ducimus. Nobis, magni? Culpa fugit consectetur repellendus suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti dolorum amet hic? Tempore similique, soluta voluptates maxime architecto quibusdam, nobis, adipisci voluptatem atque fuga quod quo. Nostrum, dolores delectus?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum doloremque expedita reiciendis. Explicabo, qui? Iure molestiae corporis, totam, adipisci ullam numquam facilis voluptatum, veritatis ratione magnam explicabo! Repudiandae, dolorem officiis?
+    </p>
 
     <div class="sliderNouveautees">
         <?php

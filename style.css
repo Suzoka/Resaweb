@@ -42,6 +42,10 @@ body {
   font-family: Mynerve;
 }
 
+body{
+  margin-top: 111px;
+}
+
 @font-face {
   font-family: 'Mynerve';
   src: url('./font/Mynerve-Regular.woff2') format('woff2'),
@@ -76,6 +80,7 @@ a:hover:not(.logo) {
 }
 
 nav {
+  top: 0px;
   display: flex;
   background-color: #AAE273;
   position: fixed;
@@ -139,6 +144,31 @@ div.slider div figcaption {
   font-size: 2rem;
 }
 
+.skip-link {
+  background-color: #f9dc4a;
+  border: solid 3px #000;
+  color: #000;
+  padding: 0.625em 0.9375em;
+  text-decoration: none;
+}
+.skip-link:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.skip-link:focus {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
 
 
 @media screen and (max-width: 795px) {
