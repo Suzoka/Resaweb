@@ -28,6 +28,19 @@
   }
 }
 
+@font-face {
+  font-family: 'Mynerve';
+  src: url('./font/Mynerve-Regular.woff2') format('woff2'),
+    url('./font/Mynerve-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Patrick Hand';
+  src: url('./font/PatrickHand-Regular.woff2') format('woff2'),
+    url('./font/PatrickHand-Regular.woff') format('woff');
+}
 
 *,
 *::before,
@@ -42,16 +55,16 @@ body {
   font-family: Mynerve;
 }
 
-body{
+body {
   margin-top: 125px;
 }
 
-@font-face {
-  font-family: 'Mynerve';
-  src: url('./font/Mynerve-Regular.woff2') format('woff2'),
-    url('./font/Mynerve-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+p {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.3rem;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 nav img {
@@ -152,6 +165,7 @@ div.slider div figcaption {
   padding: 0.625em 0.9375em;
   text-decoration: none;
 }
+
 .skip-link:not(:focus):not(:active) {
   border: 0;
   clip: rect(0 0 0 0);
@@ -164,6 +178,7 @@ div.slider div figcaption {
   white-space: nowrap;
   width: 1px;
 }
+
 .skip-link:focus {
   left: 0;
   position: absolute;
@@ -171,7 +186,7 @@ div.slider div figcaption {
   z-index: 999;
 }
 
-.top{
+.top {
   padding-top: 20px;
   margin-top: 0px;
 }
