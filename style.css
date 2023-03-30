@@ -43,7 +43,7 @@ body {
 }
 
 body{
-  margin-top: 111px;
+  margin-top: 125px;
 }
 
 @font-face {
@@ -87,6 +87,7 @@ nav {
   z-index: 300;
   width: 100%;
   overflow: hidden;
+  height: 125px;
 }
 
 
@@ -170,6 +171,10 @@ div.slider div figcaption {
   z-index: 999;
 }
 
+.top{
+  padding-top: 20px;
+  margin-top: 0px;
+}
 
 @media screen and (max-width: 795px) {
   .enTete {
