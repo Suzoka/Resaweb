@@ -67,6 +67,17 @@ p {
   margin-left: auto;
 }
 
+nav {
+  top: 0;
+  display: flex;
+  background-color: #AAE273;
+  position: fixed;
+  z-index: 300;
+  width: 100%;
+  overflow: hidden;
+  height: 125px;
+}
+
 nav img {
   width: 80px;
 }
@@ -91,18 +102,6 @@ a:hover:not(.logo) {
   color: #AAE273;
   background-color: #1E3C1D;
 }
-
-nav {
-  top: 0px;
-  display: flex;
-  background-color: #AAE273;
-  position: fixed;
-  z-index: 300;
-  width: 100%;
-  overflow: hidden;
-  height: 125px;
-}
-
 
 div.captioned-gallery {
   width: 100%;
