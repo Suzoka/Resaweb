@@ -190,6 +190,61 @@ div.slider div figcaption {
   margin-top: 0px;
 }
 
+
+.sliderNouveautees{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.toutesNouveautees{
+  display: flex;
+  position: absolute;
+  left: -22.5%;
+  /* *  +50% pour passer de div en div sur le slider*/
+}
+
+.nouveautee {
+  border: black solid 3px;
+  width: 45%;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
+  flex-shrink: 0;
+  margin: 10px;
+}
+
+.nouveautee img {
+  float: left;
+}
+
+.nouveautee h2 {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  top: -7.5%;
+  font-size: 3vw;
+}
+
+.nouveautee p {
+  position: absolute;
+  width: 50%;
+  margin-left: auto;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5vw;
+}
+
+
+
+
 @media screen and (max-width: 795px) {
   .enTete {
     top: 20vw;

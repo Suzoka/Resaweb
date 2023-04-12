@@ -42,38 +42,38 @@ create table if not exists `morgan.zarka_db`.`203_ingredients` (
     -- 0 = fruit ou 1 = legume
     `saison` tinytext,
     -- printemps, été, automne, hiver
-    `description_fruit` mediumtext
+    `description_ingredient` mediumtext
 );
 
 Insert into
-    `morgan.zarka_db`.`203_ingredients` (`nom_ingredient`, `type`, `saison`)
+    `morgan.zarka_db`.`203_ingredients` (`nom_ingredient`, `type`, `saison`, `description_ingredient`)
 values
-    ("Fraise", 0, "été"),
-    ("Litchi", 0, "hiver"),
-    ("Orange", 0, "hiver"),
-    ("Clémentine", 0, "automne"),
-    ("Pomme", 0, "automne"),
-    ("Poire", 0, "automne"),
-    ("Carotte", 1, "automne"),
-    ("Pomme de terre", 1, "hiver"),
-    ("Prune", 0, "printemps"),
-    ("pêche", 0, "printemps"),
-    ("kiwi", 0, "printemps"),
-    ("chou", 1, "printemps"),
-    ("épinard", 1, "printemps"),
-    ("cerise", 0, "printemps"),
-    ("courgette", 1, "printemps"),
-    ("poivron", 1, "printemps"),
-    ("asperge", 1, "printemps"),
-    ("tomate", 1, "été"),
-    ("poireau", 1, "hiver"),
-    ("aubergine", 1, "été"),
-    ("betterave", 1, "été"),
-    ("abricot", 0, "été"),
-    ("framboise", 0, "été"),
-    ("mirabelle", 0, "été"),
-    ("figue", 0, "automne"),
-    ("Concombre", 1, "été");
+    ("La fraise", 0, "été", "Classique des fruits rouges, elle est hydratante et vitaminée, peu importe l'âge, ce fruit est intemporel."),
+    ("Le litchi", 0, "hiver", "Fruit très vitaminé et très bon pour le transit, le litchi sera votre meilleur ami en cas de problèmes d'estomac."),
+    ("L'orange", 0, "hiver", "Remplie de vitamines, et surtout de la C, l'orange est une très bonne amie contre les virus hivernaux."),
+    ("La clémentine", 0, "automne", "Remplie de vitamines C, la clémentine peut aider à accélérer la cicatrisation et à lutter contre les infection."),
+    ("La pomme", 0, "automne", "Ce fruit aurait des vertues qui réduisent les risques de cancer et le mauvais choléstérol."),
+    ("La poire", 0, "automne", "Fruit ayant un effet antioxydant, la poire est également très bonne pour le transit."),
+    ("La carotte", 1, "automne", "Grande source de vitamine B, la carotte est bonne pour la vue et la peau. Elle a également un fort pouvoir antioxydant."),
+    ("La pomme de terre", 1, "hiver", "Féculent très riche en potassium, la pomme de terre est également riche en amidon."),
+    ("La prune", 0, "printemps", "La prune a pour effet de faciliter la gestion. Elle est une grande source de potassium, bon pour le corps."),
+    ("La pêche", 0, "printemps", ""),
+    ("Le kiwi", 0, "printemps", ""),
+    ("Le chou", 1, "printemps", ""),
+    ("L'épinard", 1, "printemps", ""),
+    ("La cerise", 0, "printemps", ""),
+    ("La courgette", 1, "printemps", ""),
+    ("Le poivron", 1, "printemps", ""),
+    ("L'asperge", 1, "printemps", ""),
+    ("La tomate", 1, "été", ""),
+    ("Le poireau", 1, "hiver", ""),
+    ("L'aubergine", 1, "été", ""),
+    ("La betterave", 1, "été", ""),
+    ("L'abricot", 0, "été", ""),
+    ("La framboise", 0, "été", ""),
+    ("La mirabelle", 0, "été", ""),
+    ("La figue", 0, "automne", ""),
+    ("Le concombre", 1, "été", "");
 
 Insert into
     `morgan.zarka_db`.`203_formules` (
