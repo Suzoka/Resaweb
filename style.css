@@ -199,7 +199,7 @@ div.slider div figcaption {
 
 .toutesNouveautees{
   display: flex;
-  position: absolute;
+  position: relative;
   left: -22.5%;
   /* *  +50% pour passer de div en div sur le slider*/
 }
