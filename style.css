@@ -192,7 +192,6 @@ div.slider div figcaption {
 
 
 .sliderNouveautees{
-  position: relative;
   overflow: hidden;
   width: 100%;
 }
@@ -215,34 +214,30 @@ div.slider div figcaption {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
   flex-shrink: 0;
   margin: 10px;
-}
-
-.nouveautee img {
-  float: left;
+  display: flex;
+  align-items: center;
 }
 
 .nouveautee h2 {
-  width: 50%;
-  position: absolute;
-  left: 50%;
   text-align: center;
-  top: -7.5%;
   font-size: 3vw;
 }
 
 .nouveautee p {
-  position: absolute;
-  width: 50%;
-  margin-left: auto;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
   text-align: center;
+  align-self: center;
   padding: 5px;
   font-size: 1.5vw;
+  margin-top: 0;
+  padding-top: 0;
 }
 
-
+.texteNouveautee{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 
 @media screen and (max-width: 795px) {

@@ -46,24 +46,41 @@
     <div class="sliderNouveautees">
         <div class="toutesNouveautees">
             <?php
-            for ($i = 0; $i < 3; $i++) {
-                echo "<div class=\"nouveautee\"><img src=\"https://laparra.fr/wp-content/uploads/2021/06/Pomme-1024x1024-1.png\" alt=\"\"
-                width=\"50%\">
-            <h2>La pomme</h2>
-            <p>Ce fruit aurait des vertues qui réduirait les risques de cancer et réduit le mauvais choléstérol.</p>
-                </div>";
-            }
-            ?>
+            require('./bdconnect.php');
+            $requete = "SELECT * FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
+            $stmt = $db->query($requete);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $ingredient1 =rand(0, count($result)-1);
+            $ingredient2 =rand(0, count($result)-1);
+            $ingredient3 =rand(0, count($result)-1);
+            $ingredient0 = $ingredient3;
+            $ingredient4 = $ingredient1;
+            for ($i = 0; $i < 5; $i++) { 
+                ?>
+                <div class="nouveautee"><img src="https://laparra.fr/wp-content/uploads/2021/06/Pomme-1024x1024-1.png"
+                        alt="" width="50%">
+                    <div class="texteNouveautee">
+                        <h2><?= $result[${"ingredient".$i}]["nom_ingredient"]?></h2>
+                        <p><?= $result[${"ingredient".$i}]["description_ingredient"]?></p>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
     </div>
 
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae et ex pariatur ratione neque quaerat sit dolores harum quasi, fugit quam ducimus. Nobis, magni? Culpa fugit consectetur repellendus suscipit.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti dolorum amet hic? Tempore similique, soluta voluptates maxime architecto quibusdam, nobis, adipisci voluptatem atque fuga quod quo. Nostrum, dolores delectus?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum doloremque expedita reiciendis. Explicabo, qui? Iure molestiae corporis, totam, adipisci ullam numquam facilis voluptatum, veritatis ratione magnam explicabo! Repudiandae, dolorem officiis?
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae et ex pariatur ratione neque quaerat sit
+        dolores harum quasi, fugit quam ducimus. Nobis, magni? Culpa fugit consectetur repellendus suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti dolorum amet hic? Tempore similique,
+        soluta voluptates maxime architecto quibusdam, nobis, adipisci voluptatem atque fuga quod quo. Nostrum, dolores
+        delectus?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum doloremque expedita reiciendis. Explicabo,
+        qui? Iure molestiae corporis, totam, adipisci ullam numquam facilis voluptatum, veritatis ratione magnam
+        explicabo! Repudiandae, dolorem officiis?
     </p>
 
     <script src="./script/nav.js"></script>
+    <script src="./script/slider.js"></script>
 </body>
 
 </html>

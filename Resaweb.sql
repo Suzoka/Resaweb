@@ -12,7 +12,7 @@ create table if not exists `morgan.zarka_db`.`203_reservation` (
     `id_utilisateur` bigint primary key auto_increment,
     `email` tinytext,
     `nom_usr` tinytext,
-    `jour` tinytext,
+    `jour` tinyint,
     -- lundi = 1, mardi = 2, mercredi = 3, jeudi = 4, vendredi = 5
     `deja_paye` boolean
 );
@@ -109,7 +109,7 @@ values
     ),
     ("La pêche", 0, 1, ""),
     ("Le kiwi", 0, 1, ""),
-    ("Le chou", 1, 1, ""),
+    ("Le choux", 1, 1, ""),
     ("L'épinard", 1, 1, ""),
     ("La cerise", 0, 1, ""),
     ("La courgette", 1, 1, ""),
@@ -698,12 +698,10 @@ values
     (27, 20),
     (29, 26),
     (30, 26);
-
---SELECT * FROM `morgan.zarka_db`.`203_ingredients`,`morgan.zarka_db`.`203_ingredients_formule` WHERE id_ingredient = ext_id_ingredient && CEILING (ext_id_formule/3) = mois; 
-
---SELECT * FROM `morgan.zarka_db`.`203_ingredients` i,`morgan.zarka_db`.`203_ingredients_formule` fi, `morgan.zarka_db`.`203_formules` f WHERE i.id_ingredient = fi.ext_id_ingredient && fi.ext_id_formule = f.id_formule && f.periode = mois;
-
---SELECT * FROM `morgan.zarka_db`.`203_ingredients` inner join `morgan.zarka_db`.`203_ingredients_formule` on id_ingredient = ext_id_ingredient WHERE CEILING (ext_id_formule/3) = mois;
-
---SELECT * FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = mois;
+    
+SELECT * FROM 
+    `morgan.zarka_db`.`203_ingredients` i 
+    inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient 
+    inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule 
+WHERE f.periode = mois;
 
