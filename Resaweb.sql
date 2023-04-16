@@ -27,7 +27,9 @@ create table if not exists `morgan.zarka_db`.`203_formules` (
     `id_formule` bigint primary key auto_increment,
     `nom_formule` tinytext,
     `prix` tinyblob,
-    `periode` tinyblob -- numéro du mois dans l'année
+    `periode` tinyblob,
+    -- numéro du mois dans l'année
+    `description_formule` mediumtext
 );
 
 create table if not exists `morgan.zarka_db`.`203_ingredients_formule` (
@@ -107,15 +109,54 @@ values
         1,
         "La prune a pour effet de faciliter la gestion. Elle est une grande source de potassium, bon pour le corps."
     ),
-    ("La pêche", 0, 1, ""),
-    ("Le kiwi", 0, 1, ""),
-    ("Le choux", 1, 1, ""),
-    ("L'épinard", 1, 1, ""),
-    ("La cerise", 0, 1, ""),
-    ("La courgette", 1, 1, ""),
-    ("Le poivron", 1, 1, ""),
-    ("L'asperge", 1, 1, ""),
-    ("La tomate", 1, 2, ""),
+    (
+        "La pêche",
+        0,
+        1,
+        "La pêche réduit les risques de maladis cardiovasculaire. Elle contient également beaucoup d'antioxydants."
+    ),
+    (
+        "Le kiwi",
+        0,
+        1,
+        "Le kiwi est une grande source de fibres. Mais en plus de cela, il limite les risques de maladies cardiovasculaire et de certains cancers."
+    ),
+    (
+        "Le choux",
+        1,
+        1,
+        "Remplie de multiples vitamines, le choux permet une bonne santé de la peau, des yeux, et des os, mais également de garder nos dents et gencives en bonne santée."
+    ),
+    (
+        "L'épinard",
+        1,
+        1,
+        "Popularisé par Popeï, l'épinard est une grande source de bétaïne, permettant d'avoir une meilleure endurance à l'effort physique et donc d'améliorer nos performances sportives."
+    ),
+    (
+        "La cerise",
+        0,
+        1,
+        "La cerise est un fruit qui a pour particularité d'améliorer le sommeil. De plus, elle soulage l'arthrose et améliore la santé intestinale."
+    ),
+    (
+        "La courgette",
+        1,
+        1,
+        "Riche en potassium, la courgette est un légume très bon pour les muscles et régule la pression sanguine."
+    ),
+    (
+        "Le poivron",
+        1,
+        1,
+        "En été, rien de tel que de bons poivrons que l'on fait revenir au barbecue. Mais cuit au four dans vos plats, ils seront également très bons."
+    ),
+    (
+        "L'asperge",
+        1,
+        1,
+        "Elles ont le pouvoir de diminuer le taux d'homocystéine dans le sang et limitent également les risques de cancers."
+    ),
     ("Le poireau", 1, 4, ""),
     ("L'aubergine", 1, 2, ""),
     ("La betterave", 1, 2, ""),
@@ -127,7 +168,7 @@ values
 
 Insert into
     `morgan.zarka_db`.`203_formules` (
-        `id_formule`
+        `id_formule`,
         `nom_formule`,
         `prix`,
         `description_formule`,
@@ -698,10 +739,12 @@ values
     (27, 20),
     (29, 26),
     (30, 26);
-    
-SELECT * FROM 
-    `morgan.zarka_db`.`203_ingredients` i 
-    inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient 
-    inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule 
-WHERE f.periode = mois;
 
+SELECT
+    *
+FROM
+    `morgan.zarka_db`.`203_ingredients` i
+    inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient
+    inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule
+WHERE
+    f.periode = mois;
