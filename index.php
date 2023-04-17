@@ -36,8 +36,8 @@
                 </div>
             </div>
         </div>
-        </div>
         <h1 class="enTete">Fructus et legumina</h1>
+        <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="50px" class="appeleScroll"></a>
     </header>
 
     <h1 class="titre" id="contenu">En ce moment dans vos panniers</h1>
@@ -50,22 +50,29 @@
             $requete = "SELECT * FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
             $stmt = $db->query($requete);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $ingredient1 =rand(0, count($result)-1);
-            $ingredient2 =rand(0, count($result)-1);
-            $ingredient3 =rand(0, count($result)-1);
+            $ingredient1 = rand(0, count($result) - 1);
+            $ingredient2 = rand(0, count($result) - 1);
+            $ingredient3 = rand(0, count($result) - 1);
             $ingredient0 = $ingredient3;
             $ingredient4 = $ingredient1;
-            for ($i = 0; $i < 5; $i++) { 
+            $ingredient5 = $ingredient2;
+            for ($i = 0; $i < 6; $i++) {
                 ?>
                 <div class="nouveautee"><img src="https://laparra.fr/wp-content/uploads/2021/06/Pomme-1024x1024-1.png"
                         alt="" width="50%">
                     <div class="texteNouveautee">
-                        <h2><?= $result[${"ingredient".$i}]["nom_ingredient"]?></h2>
-                        <p><?= $result[${"ingredient".$i}]["description_ingredient"]?></p>
+                        <h2>
+                            <?= $result[${"ingredient" . $i}]["nom_ingredient"] ?>
+                        </h2>
+                        <p>
+                            <?= $result[${"ingredient" . $i}]["description_ingredient"] ?>
+                        </p>
                     </div>
                 </div>
             <?php } ?>
         </div>
+        <img src="./photos/fleche.svg" alt="" width="5%" class="sliderDroite">
+        <img src="./photos/fleche.svg" alt="" width="5%" class="sliderGauche">
     </div>
 
 

@@ -55,6 +55,10 @@ body {
   font-family: Mynerve;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin-top: 125px;
 }
@@ -98,7 +102,7 @@ a:hover {
   cursor: pointer;
 }
 
-a:hover:not(.logo) {
+nav a:hover:not(.logo) {
   color: #AAE273;
   background-color: #1E3C1D;
 }
@@ -191,12 +195,13 @@ div.slider div figcaption {
 }
 
 
-.sliderNouveautees{
+.sliderNouveautees {
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
-.toutesNouveautees{
+.toutesNouveautees {
   display: flex;
   position: relative;
   left: -22.5%;
@@ -232,11 +237,36 @@ div.slider div figcaption {
   padding-top: 0;
 }
 
-.texteNouveautee{
+.texteNouveautee {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.appeleScroll {
+  position: absolute;
+  left: 50%;
+  top: 60vw;
+  transform: translateX(-50%);
+}
+
+.sliderDroite {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  right: 10px;
+}
+
+.sliderGauche {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  left: 10px;
+}
+
+.sliderDroite, .sliderGauche:hover{
+  cursor: pointer;
 }
 
 
@@ -249,5 +279,9 @@ div.slider div figcaption {
 @media screen and (min-width: 1500px) {
   .enTete {
     top: 12vw;
+  }
+
+  .appeleScroll {
+    top: 50vw;
   }
 }
