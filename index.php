@@ -50,10 +50,11 @@
             $requete = "SELECT * FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
             $stmt = $db->query($requete);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $ingredient1 = rand(0, count($result) - 1);
-            $ingredient2 = rand(0, count($result) - 1);
-            $ingredient3 = rand(0, count($result) - 1);
-            $ingredient0 = $ingredient3;
+            $rand_keys = array_rand($result, 3);
+            $ingredient0 = $rand_keys[0];
+            $ingredient1 = $rand_keys[1];
+            $ingredient2 = $rand_keys[2];
+            $ingredient3 = $ingredient0;
             $ingredient4 = $ingredient1;
             $ingredient5 = $ingredient2;
             for ($i = 0; $i < 6; $i++) {
