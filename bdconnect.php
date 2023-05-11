@@ -1,3 +1,3 @@
 <?php
-$db=new PDO("mysql:host=localhost;dbname=morgan.zarka_db;port=3306;charset=utf8", 'morgan.zarka' , 'IUT.Morgan');
+$db=new PDO("mysql:host=localhost;dbname=zarka_resaweb;port=3306;charset=utf8", 'zarka_morgan' , 'IUT.Morgan');
 ?>

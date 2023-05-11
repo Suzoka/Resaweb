@@ -47,7 +47,7 @@
         <div class="toutesNouveautees">
             <?php
             require('./bdconnect.php');
-            $requete = "SELECT DISTINCT i.* FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
+            $requete = "SELECT DISTINCT i.* FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `zarka_resaweb`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
             $stmt = $db->query($requete);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $rand_keys = array_rand($result, 3);

@@ -119,7 +119,7 @@ values
         "Le kiwi",
         0,
         1,
-        "Le kiwi est une grande source de fibres. Mais en plus de cela, il limite les risques de maladies cardiovasculaire et de certains cancers."
+        "Le kiwi est une grande source de fibres. Mais en plus de cela, il limite les risques de maladies cardiovasculaire et de  cancers."
     ),
     (
         "Le choux",
