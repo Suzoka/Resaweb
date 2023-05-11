@@ -77,13 +77,13 @@ values
         "La clémentine",
         0,
         3,
-        "Remplie de vitamines C, la clémentine peut aider à accélérer la cicatrisation et à lutter contre les infection."
+        "Remplie de vitamines C, la clémentine peut aider à accélérer la cicatrisation et à lutter contre les infections."
     ),
     (
         "La pomme",
         0,
         3,
-        "Ce fruit aurait des vertues qui réduisent les risques de cancer et le mauvais choléstérol."
+        "Ce fruit aurait des vertues qui réduisent les risques de cancers et le mauvais choléstérol."
     ),
     (
         "La poire",
@@ -131,7 +131,7 @@ values
         "L'épinard",
         1,
         1,
-        "Popularisé par Popeï, l'épinard est une grande source de bétaïne, permettant d'avoir une meilleure endurance à l'effort physique et donc d'améliorer nos performances sportives."
+        "Popularisé par Popeï, l'épinard est une grande source de bétaïne, permettant d'avoir une meilleure endurance à l'effort physique."
     ),
     (
         "La cerise",
@@ -741,10 +741,10 @@ values
     (30, 26);
 
 SELECT
-    *
+    DISTINCT i.*
 FROM
     `morgan.zarka_db`.`203_ingredients` i
     inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient
     inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule
 WHERE
-    f.periode = mois;
+    f.periode = MONTH(NOW());

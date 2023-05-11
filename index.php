@@ -17,7 +17,7 @@
         <nav id="navigation">
             <a href="./index.php" class="logo"><img src="./photos/logo.svg" alt="Accueil"></a>
             <a href="./concept.php">Le concept</a>
-            <a>Commandez votre panier&nbsp;!</a>
+            <a href="./catalogue.php">Commandez votre panier&nbsp;!</a>
             <a href="./quisommesnous.php">Qui sommes nous&nbsp;?</a>
         </nav>
         <div class="captioned-gallery" id="top">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <h1 class="enTete">Fructus et legumina</h1>
-        <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="50px" class="appeleScroll"></a>
+        <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="75px" class="appeleScroll"></a>
     </header>
 
     <h1 class="titre" id="contenu">En ce moment dans vos panniers</h1>
@@ -47,7 +47,7 @@
         <div class="toutesNouveautees">
             <?php
             require('./bdconnect.php');
-            $requete = "SELECT * FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
+            $requete = "SELECT DISTINCT i.* FROM `morgan.zarka_db`.`203_ingredients` i inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule WHERE f.periode = MONTH(NOW());";
             $stmt = $db->query($requete);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $rand_keys = array_rand($result, 3);
@@ -59,7 +59,8 @@
             $ingredient5 = $ingredient2;
             for ($i = 0; $i < 6; $i++) {
                 ?>
-                <div class="nouveautee"><img src="https://laparra.fr/wp-content/uploads/2021/06/Pomme-1024x1024-1.png"
+                <div class="nouveautee"><img
+                        src="https://blog.lecomptoirdetoamasina.fr/wp-content/uploads/2022/12/Quest-ce-que-la-pomme.png"
                         alt="" width="50%">
                     <div class="texteNouveautee">
                         <h2>
@@ -86,6 +87,8 @@
         qui? Iure molestiae corporis, totam, adipisci ullam numquam facilis voluptatum, veritatis ratione magnam
         explicabo! Repudiandae, dolorem officiis?
     </p>
+
+    <footer><a href="./mentionslegales.php">mentions légales</a></footer>
 
     <script src="./script/nav.js"></script>
     <script src="./script/slider.js"></script>

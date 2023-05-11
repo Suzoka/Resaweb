@@ -17,7 +17,7 @@
         <nav id="navigation">
             <a href="./index.php" class="logo"><img src="./photos/logo.svg" alt="Accueil"></a>
             <a href="./concept.php">Le concept</a>
-            <a>Commandez votre panier&nbsp;!</a>
+            <a href="./catalogue.php">Commandez votre panier&nbsp;!</a>
             <a href="./quisommesnous.php">Qui sommes nous&nbsp;?</a>
         </nav>
     </header>

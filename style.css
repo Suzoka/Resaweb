@@ -28,6 +28,21 @@
   }
 }
 
+@keyframes appeleScroll {
+  0% {
+    transform: translate(-50%, 0) ;
+  }
+  20% {
+    transform: translate(-50%, 10px) ;
+  }
+  40% {
+    transform: translate(-50%, 0);
+  }
+  100%{
+    transform: translate(-50%, 0);
+  }
+}
+
 @font-face {
   font-family: 'Mynerve';
   src: url('./font/Mynerve-Regular.woff2') format('woff2'),
@@ -37,9 +52,19 @@
 }
 
 @font-face {
-  font-family: 'Patrick Hand';
-  src: url('./font/PatrickHand-Regular.woff2') format('woff2'),
-    url('./font/PatrickHand-Regular.woff') format('woff');
+  font-family: 'Roboto';
+  src: url('./font/Roboto-Regular.woff2') format('woff2'),
+    url('./font/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:url('./font/Roboto-Bold.woff2') format('woff2'),
+        url('./font/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
 }
 
 *,
@@ -61,11 +86,12 @@ html {
 
 body {
   margin-top: 125px;
+  background-color: #fff6e8;
 }
 
 p {
-  font-family: 'Patrick Hand', cursive;
-  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;;
+  font-size: 1.2rem;
   width: 75%;
   margin-right: auto;
   margin-left: auto;
@@ -86,7 +112,7 @@ nav img {
   width: 80px;
 }
 
-a {
+nav a {
   font-size: 1.5rem;
   text-align: center;
   color: #1E3C1D;
@@ -115,16 +141,14 @@ div.captioned-gallery {
 div.slider {
   position: relative;
   width: 500%;
-  font-size: 0;
-  /* ? pourquoi ça créer une marge dégueulasse entre les photos quand je l'enlève ??? */
   animation: 15s slidy infinite;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 div.slider div {
   width: 20%;
   height: auto;
-  display: inline-block;
-  position: inherit;
 }
 
 div.slider img {
@@ -209,14 +233,14 @@ div.slider div figcaption {
 }
 
 .nouveautee {
-  border: black solid 3px;
+  border: rgb(96, 96, 96) solid 1px;
   width: 45%;
-  border-radius: 25px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.8);
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
   flex-shrink: 0;
   margin: 1%;
   display: flex;
@@ -249,6 +273,7 @@ div.slider div figcaption {
   left: 50%;
   top: 60vw;
   transform: translateX(-50%);
+  animation: 2s appeleScroll infinite;
 }
 
 .sliderDroite {
@@ -267,6 +292,71 @@ div.slider div figcaption {
 
 .sliderDroite, .sliderGauche:hover{
   cursor: pointer;
+}
+
+
+/*Footer à vérifier*/
+
+footer{
+  background-color: black;
+}
+footer a{
+  color: white;
+}
+
+
+/*Formules*/
+.formule {
+  border: rgb(96, 96, 96) solid 1px;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s;
+}
+
+.formule:hover {
+  transform: scale(1.05);
+}
+
+.formule div.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+  padding: 5px 15px;
+}
+
+.formule h2, .formule p {
+  margin: 0;
+}
+
+a.lienFormule {
+  padding: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.formule h2 {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.formule p{
+  text-align: left;
+  width: auto;
+}
+
+.prix {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 15px;
 }
 
 
