@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Clear cache
+        run: |
+          sudo rm -rf /var/cache/gha
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
