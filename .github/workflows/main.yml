@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clear cache
-        run: |
-          sudo rm -rf /var/cache/gha
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -23,7 +19,7 @@ jobs:
           node-version: 16
 
       - name: Set up FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
