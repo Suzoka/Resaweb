@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commandez votre pannier</title>
+    <title>Article</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./photos/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -22,37 +21,37 @@
         </nav>
     </header>
 
-    <h1 class="top titre marge" id="top">Nos formules</h1>
-
-    <div class="allFormule">
-
-        <?php
+    <?php
+    if ($_GET['id']) {
         require('./bdconnect.php');
-        $requete = "SELECT * FROM `zarka_resaweb`.`203_formules` where periode = MONTH(NOW());";
+        $requete = "SELECT * FROM `zarka_resaweb`.`203_formules` where id_formule = " . $_GET['id'] . ";";
         $stmt = $db->query($requete);
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        ?>
 
-        foreach ($result as $key => $element) {
-            ?>
-
-            <div class="formule">
-                <h2>
-                    <?= $element['nom_formule']; ?>
-                </h2>
-                <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
-                    width="100%">
+        <div class="produit">
+            <div class="lien"><a class="lienFormule" href="./catalogue.php">Retour au catalogue</a></div>
+            <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
+                width="40%">
+            <div class="produitTexte">
+                <h1 class="top titre" id="top">
+                    <?= $result["nom_formule"]; ?>
+                </h1>
                 <p>
-                    <?= $element['description_formule']; ?>
+                    <?= $result['description_formule']; ?>
                 </p>
                 <p class="prix">
-                    <?= $element['prix']; ?>€
+                    <?= $result['prix']; ?>€
                 </p>
-                <a class="lienFormule" href="./article.php?id=<?= $element['id_formule']; ?>">Commandez maintenant</a>
+                <div class="lien"><a class="lienFormule" href="#reserver">Ajouter au panier</a></div>
             </div>
-        <?php } ?>
-    </div>
+        </div>
+    <?php } else {
+        header('Location: ./catalogue.php');
+        exit;
+    }
 
-
+    ?>
 
     <script src="./script/nav.js"></script>
 </body>
