@@ -327,6 +327,7 @@ footer a{
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .lienFormule {
@@ -337,6 +338,7 @@ footer a{
   border-radius: 10px;
   padding: 7.5px 12px;
   transition: 0.5s;
+  width: fit-content;
 }
 
 .lienFormule:hover {
@@ -373,7 +375,10 @@ footer a{
   flex-wrap: wrap;
   padding: 15px;
   justify-content: space-around;
+  align-items: center;
   gap: 20px 0;
+  background-color: #aae273a6;
+  border-radius: 15px;
 }
 
 .produitTexte>*{
@@ -385,13 +390,32 @@ margin: 0;
   text-align: center;
   height: fit-content;
 }
-.produitTexte p{
+.produitTexte p:not(.lienFormule){
   width: 50%;
+  padding-left: 50px;
 }
 
 .produitTexte div {
   justify-content: center;
   display: flex;
+  width: 50%;
+}
+
+label{
+  font-family: 'roboto', sans-serif;
+}
+
+.indisponible{
+  text-decoration: none;
+  color: white;
+  background-color: #5c6360;
+  border-radius: 10px;
+  padding: 7.5px 12px;
+  transition: 0.5s;
+  width: fit-content;
+  text-align: center;
+  padding: 3px!important;
+  font-size: 1.05rem;
 }
 
 

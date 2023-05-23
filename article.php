@@ -43,7 +43,24 @@
                 <p class="prix">
                     <?= $result['prix']; ?>€
                 </p>
-                <div class="lien"><a class="lienFormule" href="#reserver">Ajouter au panier</a></div>
+                <div class="quantite">
+                    <label for="quantite">Quantité :&nbsp;</label>
+                    <select name="quantite" id="quantite">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <?php 
+                if ($result["periode"]== date("m")){
+                    echo('<div class="lien"><p class="lienFormule">Ajouter au panier</p></div>');
+                }
+                else{
+                    echo('<div class="lien"><p class="indisponible">Cette formule n\'est pas disponible</p></div>');
+                }
+                ?>
             </div>
         </div>
     <?php } else {
