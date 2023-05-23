@@ -30,15 +30,18 @@
 
 @keyframes appeleScroll {
   0% {
-    transform: translate(-50%, 0) ;
+    transform: translate(-50%, 0);
   }
+
   20% {
-    transform: translate(-50%, 10px) ;
+    transform: translate(-50%, 10px);
   }
+
   40% {
     transform: translate(-50%, 0);
   }
-  100%{
+
+  100% {
     transform: translate(-50%, 0);
   }
 }
@@ -55,16 +58,16 @@
   font-family: 'Roboto';
   src: url('./font/Roboto-Regular.woff2') format('woff2'),
     url('./font/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src:url('./font/Roboto-Bold.woff2') format('woff2'),
-        url('./font/Roboto-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Roboto';
+  src: url('./font/Roboto-Bold.woff2') format('woff2'),
+    url('./font/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 *,
@@ -90,7 +93,8 @@ body {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
+  ;
   font-size: 1.2rem;
   width: 60%;
   margin-right: auto;
@@ -288,19 +292,21 @@ div.slider div figcaption {
   left: 10px;
 }
 
-.sliderDroite, .sliderGauche:hover{
+.sliderDroite,
+.sliderGauche:hover {
   cursor: pointer;
 }
 
-footer{
+footer {
   background-color: black;
 }
-footer a{
+
+footer a {
   color: white;
 }
 
-.marge{
-    margin-bottom: 50px;
+.marge {
+  margin-bottom: 50px;
 }
 
 /*Formules*/
@@ -339,59 +345,68 @@ footer a{
   padding: 7.5px 12px;
   transition: 0.5s;
   width: fit-content;
+  text-align: center;
 }
 
 .lienFormule:hover {
   background-color: #1f4e3a;
 }
 
-.prix{
+.prix {
   font-weight: 700;
   text-align: center;
   font-size: 1.5rem;
 }
 
-.produit{
+.produit {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  border: rgb(96, 96, 96) solid 1px;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  border-radius: 10px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.produit img{
+.produit img {
   margin: auto 5%;
 }
 
-.produit>*:not(img, .lien){
+.produit>*:not(img) {
   width: 50%;
 }
 
-.lien{
-  width: 100%;
+.lien {
   margin-bottom: 20px;
   height: fit-content;
+  margin-left: 5%;
+  padding-top: 20px;
 }
 
-.produitTexte{
+.produitTexte {
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
   justify-content: space-around;
   align-items: center;
   gap: 20px 0;
-  background-color: #aae273a6;
-  border-radius: 15px;
 }
 
-.produitTexte>*{
-margin: 0;
+.produitTexte>* {
+  margin: 0;
 }
 
-.produitTexte h1{
+.produitTexte h1 {
   width: 100%;
   text-align: center;
   height: fit-content;
 }
-.produitTexte p:not(.lienFormule){
+
+.produitTexte p:not(.lienFormule) {
   width: 50%;
   padding-left: 50px;
 }
@@ -400,13 +415,14 @@ margin: 0;
   justify-content: center;
   display: flex;
   width: 50%;
+  padding: 0;
 }
 
-label{
+label {
   font-family: 'roboto', sans-serif;
 }
 
-.indisponible{
+.indisponible {
   text-decoration: none;
   color: white;
   background-color: #5c6360;
@@ -415,10 +431,76 @@ label{
   transition: 0.5s;
   width: fit-content;
   text-align: center;
-  padding: 3px!important;
+  padding: 3px !important;
   font-size: 1.05rem;
 }
 
+.visible {
+visibility: visible;
+opacity: 1;
+}
+
+.invisible {
+visibility: hidden;
+opacity: 0;
+}
+
+.popup {
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.25s;
+}
+
+.popup p {
+  color: white;
+  width: fit-content;
+}
+
+.textePopup {
+  border: rgb(96, 96, 96) solid 1px;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #96969696;
+}
+
+.ok {
+  background-color: #373737;
+  color: white;
+  border-radius: 10px;
+  padding: 7.5px 12px;
+  transition: 0.5s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ok:hover {
+  background-color: #cdcdcd;
+  color: black;
+}
+
+.lienPanier {
+  display: block;
+  position: fixed;
+  width: 75px;
+  bottom: 35px;
+  left: 2%;
+  box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
+  border-radius: 100px;
+  background-color: #AAE273;
+}
 
 @media screen and (max-width: 795px) {
   .enTete {

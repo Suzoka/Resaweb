@@ -1,6 +1,6 @@
-create database if not exists `morgan.zarka_db`;
+create database if not exists `zarka_resaweb`;
 
-use `morgan.zarka_db`;
+use `zarka_resaweb`;
 
 drop table if exists `203_ingredients`;
 
@@ -8,7 +8,7 @@ drop table if exists `203_formules`;
 
 drop table if exists `203_ingredients_formule`;
 
-create table if not exists `morgan.zarka_db`.`203_reservation` (
+create table if not exists `zarka_resaweb`.`203_reservation` (
     `id_utilisateur` bigint primary key auto_increment,
     `email` tinytext,
     `nom_usr` tinytext,
@@ -17,13 +17,13 @@ create table if not exists `morgan.zarka_db`.`203_reservation` (
     `deja_paye` boolean
 );
 
-create table if not exists `morgan.zarka_db`.`203_formule_reservee` (
+create table if not exists `zarka_resaweb`.`203_formule_reservee` (
     `id_reservation` bigint primary key auto_increment,
     `ext_id_utilisateur` bigint,
     `ext_id_formule` bigint
 );
 
-create table if not exists `morgan.zarka_db`.`203_formules` (
+create table if not exists `zarka_resaweb`.`203_formules` (
     `id_formule` bigint primary key auto_increment,
     `nom_formule` tinytext,
     `prix` tinyblob,
@@ -32,12 +32,12 @@ create table if not exists `morgan.zarka_db`.`203_formules` (
     `description_formule` mediumtext
 );
 
-create table if not exists `morgan.zarka_db`.`203_ingredients_formule` (
+create table if not exists `zarka_resaweb`.`203_ingredients_formule` (
     `ext_id_formule` bigint,
     `ext_id_ingredient` bigint
 );
 
-create table if not exists `morgan.zarka_db`.`203_ingredients` (
+create table if not exists `zarka_resaweb`.`203_ingredients` (
     `id_ingredient` bigint primary key auto_increment,
     `nom_ingredient` tinytext,
     `type` int,
@@ -48,7 +48,7 @@ create table if not exists `morgan.zarka_db`.`203_ingredients` (
 );
 
 Insert into
-    `morgan.zarka_db`.`203_ingredients` (
+    `zarka_resaweb`.`203_ingredients` (
         `nom_ingredient`,
         `type`,
         `saison`,
@@ -167,7 +167,7 @@ values
     ("Le concombre", 1, 2, "");
 
 Insert into
-    `morgan.zarka_db`.`203_formules` (
+    `zarka_resaweb`.`203_formules` (
         `id_formule`,
         `nom_formule`,
         `prix`,
@@ -429,7 +429,7 @@ values
     );
 
 Insert into
-    `morgan.zarka_db`.`203_ingredients_formule` (
+    `zarka_resaweb`.`203_ingredients_formule` (
         `ext_id_formule`,
         `ext_id_ingredient`
     )
@@ -743,8 +743,8 @@ values
 SELECT
     DISTINCT i.*
 FROM
-    `morgan.zarka_db`.`203_ingredients` i
-    inner join `morgan.zarka_db`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient
-    inner join `morgan.zarka_db`.`203_formules` f on fi.ext_id_formule = f.id_formule
+    `zarka_resaweb`.`203_ingredients` i
+    inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient
+    inner join `zarka_resaweb`.`203_formules` f on fi.ext_id_formule = f.id_formule
 WHERE
     f.periode = MONTH(NOW());

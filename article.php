@@ -28,9 +28,8 @@
         $stmt = $db->query($requete);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         ?>
-
+        <div class="lien"><a class="lienFormule" href="./catalogue.php">Retour au catalogue</a></div>
         <div class="produit">
-            <div class="lien"><a class="lienFormule" href="./catalogue.php">Retour au catalogue</a></div>
             <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
                 width="40%">
             <div class="produitTexte">
@@ -55,7 +54,7 @@
                 </div>
                 <?php 
                 if ($result["periode"]== date("m")){
-                    echo('<div class="lien"><p class="lienFormule">Ajouter au panier</p></div>');
+                    echo('<div class="lien"><p class="lienFormule panier" id="'.$result["id_formule"].'">Ajouter au panier</p></div>');
                 }
                 else{
                     echo('<div class="lien"><p class="indisponible">Cette formule n\'est pas disponible</p></div>');
@@ -66,11 +65,20 @@
     <?php } else {
         header('Location: ./catalogue.php');
         exit;
-    }
+    }?>
 
-    ?>
+    <div class="popup invisible">
+        <div class="textePopup">
+            <p>L'article a bien été ajouté au panier !</p>
+            <p class="ok">C'est compris</p>
+        </div>
+    </div>
+
+    <a href='./panier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
 
     <script src="./script/nav.js"></script>
+    <script src="./script/ajoutPanier.js"></script>
+    <script src="./script/lienPanier.js"></script>
 </body>
 
 </html>

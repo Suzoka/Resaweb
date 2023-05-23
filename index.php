@@ -40,7 +40,7 @@
         <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="75px" class="appeleScroll"></a>
     </header>
 
-    <h1 class="titre" id="contenu">En ce moment dans vos panniers</h1>
+    <h1 class="titre" id="contenu">En ce moment dans vos paniers</h1>
 
 
     <div class="sliderNouveautees">
@@ -88,10 +88,12 @@
         explicabo! Repudiandae, dolorem officiis?
     </p>
 
+    <a href='./panier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
     <footer><a href="./mentionslegales.php">mentions légales</a></footer>
 
     <script src="./script/nav.js"></script>
     <script src="./script/slider.js"></script>
+    <script src="./script/lienPanier.js"></script>
 </body>
 
 </html>

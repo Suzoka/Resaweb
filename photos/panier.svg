@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 3.9px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #aae273;
+      }
+
+      .cls-2 {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Pastille">
+    <circle class="cls-3" cx="70.87" cy="70.87" r="70.87"/>
+  </g>
+  <g id="Picto">
+    <g>
+      <polygon class="cls-2" points="122.1 49.77 101.79 99.59 48.52 99.59 19.76 49.77 122.1 49.77"/>
+      <line class="cls-1" x1="111.84" y1="49.77" x2="91.54" y2="99.59"/>
+      <line class="cls-1" x1="101.59" y1="49.77" x2="81.28" y2="99.59"/>
+      <line class="cls-1" x1="91.33" y1="49.77" x2="71.03" y2="99.59"/>
+      <line class="cls-1" x1="81.08" y1="49.77" x2="60.78" y2="99.59"/>
+      <line class="cls-1" x1="70.82" y1="49.77" x2="50.52" y2="99.59"/>
+      <line class="cls-1" x1="60.57" y1="49.77" x2="43.68" y2="91.21"/>
+      <line class="cls-1" x1="57.35" y1="32.62" x2="37.67" y2="80.8"/>
+      <line class="cls-1" x1="40.06" y1="49.77" x2="31.66" y2="70.38"/>
+    </g>
+    <g>
+      <line class="cls-1" x1="30.01" y1="49.77" x2="58.78" y2="99.59"/>
+      <line class="cls-1" x1="40.27" y1="49.77" x2="69.03" y2="99.59"/>
+      <line class="cls-1" x1="50.52" y1="49.77" x2="79.29" y2="99.59"/>
+      <line class="cls-1" x1="60.78" y1="49.77" x2="89.54" y2="99.59"/>
+      <line class="cls-1" x1="71.03" y1="49.77" x2="99.8" y2="99.59"/>
+      <line class="cls-1" x1="81.28" y1="49.77" x2="105.21" y2="91.21"/>
+      <line class="cls-1" x1="81.71" y1="32.62" x2="109.45" y2="80.8"/>
+      <line class="cls-1" x1="101.79" y1="49.77" x2="113.7" y2="70.38"/>
+    </g>
+  </g>
+</svg>
