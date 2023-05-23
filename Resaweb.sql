@@ -240,21 +240,21 @@ values
     ),
     (
         10,
-        "Fruits de Avril",
+        "Fruits d'Avril",
         25,
         "Un panier remplie de fruits de saison",
         4
     ),
     (
         11,
-        "Légumes de Avril",
+        "Légumes d'Avril",
         25,
         "Un panier remplie de légumes de saison",
         4
     ),
     (
         12,
-        "Fruits et légumes de Avril",
+        "Fruits et légumes d'Avril",
         35,
         "Un panier remplie de fruits et légumes de saison",
         4
@@ -324,21 +324,21 @@ values
     ),
     (
         22,
-        "Fruits de Août",
+        "Fruits d'Août",
         25,
         "Un panier remplie de fruits de saison",
         8
     ),
     (
         23,
-        "Légumes de Août",
+        "Légumes d'Août",
         25,
         "Un panier remplie de légumes de saison",
         8
     ),
     (
         24,
-        "Fruits et légumes de Août",
+        "Fruits et légumes d'Août",
         35,
         "Un panier remplie de fruits et légumes de saison",
         8
@@ -366,21 +366,21 @@ values
     ),
     (
         28,
-        "Fruits de Octobre",
+        "Fruits d'Octobre",
         25,
         "Un panier remplie de fruits de saison",
         10
     ),
     (
         29,
-        "Légumes de Octobre",
+        "Légumes d'Octobre",
         25,
         "Un panier remplie de légumes de saison",
         10
     ),
     (
         30,
-        "Fruits et légumes de Octobre",
+        "Fruits et légumes d'Octobre",
         35,
         "Un panier remplie de fruits et légumes de saison",
         10
