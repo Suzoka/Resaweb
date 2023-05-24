@@ -88,7 +88,7 @@
         explicabo! Repudiandae, dolorem officiis?
     </p>
 
-    <a href='./panier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
     <footer><a href="./mentionslegales.php">mentions légales</a></footer>
 
     <script src="./script/nav.js"></script>

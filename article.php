@@ -54,7 +54,7 @@
                 </div>
                 <?php 
                 if ($result["periode"]== date("m")){
-                    echo('<div class="lien"><p class="lienFormule panier" id="'.$result["id_formule"].'">Ajouter au panier</p></div>');
+                    echo('<div class="lien"><p class="lienFormule panier" id="'.str_replace(" ", "-", $result["nom_formule"]).'">Ajouter au panier</p></div>');
                 }
                 else{
                     echo('<div class="lien"><p class="indisponible">Cette formule n\'est pas disponible</p></div>');
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <a href='./panier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
 
     <script src="./script/nav.js"></script>
     <script src="./script/ajoutPanier.js"></script>

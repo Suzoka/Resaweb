@@ -16,7 +16,7 @@ bouton.addEventListener('click', function() {
     });
     if (!flag) {
         panier.push({
-            produit: bouton.id,
+            produit: bouton.id.replaceAll("-", " "),
             quantite: quantite.value
         });
     }
