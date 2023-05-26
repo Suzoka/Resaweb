@@ -22,6 +22,7 @@ function masquerPopup() {
     boutonPanier.classList.remove('invisible');
     boutonPanier.classList.add('visible');
     bouton.addEventListener('click', ajoutPanier);
+    quantite.focus();
 }
 
 function ajoutPanier() {

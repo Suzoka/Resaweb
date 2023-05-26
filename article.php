@@ -52,20 +52,41 @@
                         <option value="5">5</option>
                     </select>
                 </div>
-                <?php 
-                if ($result["periode"]== date("m")){
-                    echo('<div class="lien"><button class="lienFormule panier" id="'.$result["id_formule"].'">Ajouter au panier</button></div>');
-                }
-                else{
-                    echo('<div class="lien"><p class="indisponible">Cette formule n\'est pas disponible</p></div>');
+                <?php
+                if ($result["periode"] == date("m")) {
+                    echo ('<div class="lien"><button class="lienFormule panier" id="' . $result["id_formule"] . '">Ajouter au panier</button></div>');
+                } else {
+                    echo ('<div class="lien"><p class="indisponible">Cette formule n\'est pas disponible</p></div>');
                 }
                 ?>
             </div>
         </div>
+
+        <div class="dansPanier">
+            <p>Ce panier peut contenir :</p>
+            <ul>
+                <?php
+                $requete = "SELECT * FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient where fi.ext_id_formule = ". $result["id_formule"]." ORDER BY i.type ASC";
+                $stmt = $db->query($requete);
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($result as $key => $element) {
+                    $ingredient = "Des " . str_replace("L'", "", str_replace("La", "", str_replace("Le", "", $element["nom_ingredient"])));
+                    if (substr($ingredient, -1) != "x") {
+                        if (substr($ingredient, -1) == "u") {
+                            $ingredient .= "x";
+                        } else {
+                            $ingredient .= "s";
+                        }
+                    }
+                    echo ("<li>" . $ingredient . "</li>");
+                }
+                ?>
+            </ul>
+        </div>
     <?php } else {
         header('Location: ./catalogue.php');
         exit;
-    }?>
+    } ?>
 
     <div class="popup invisible">
         <div class="textePopup">
@@ -74,7 +95,8 @@
         </div>
     </div>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg'
+            alt='Aller au panier'></a>
 
     <script src="./script/nav.js"></script>
     <script src="./script/ajoutPanier.js"></script>
