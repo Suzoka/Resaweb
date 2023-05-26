@@ -1,3 +1,33 @@
+@-webkit-keyframes slidy {
+  0% {
+    left: 0%;
+  }
+
+  25% {
+    left: 0%;
+  }
+
+  30% {
+    left: -100%;
+  }
+
+  55% {
+    left: -100%;
+  }
+
+  60% {
+    left: -200%;
+  }
+
+  95% {
+    left: -200%;
+  }
+
+  100% {
+    left: -300%;
+  }
+}
+
 @keyframes slidy {
   0% {
     left: 0%;
@@ -25,6 +55,24 @@
 
   100% {
     left: -300%;
+  }
+}
+
+@-webkit-keyframes appeleScroll {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  20% {
+    transform: translate(-50%, 10px);
+  }
+
+  40% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
   }
 }
 
@@ -144,7 +192,8 @@ div.captioned-gallery {
 div.slider {
   position: relative;
   width: 500%;
-  animation: 15s slidy infinite;
+  -webkit-animation: 15s slidy infinite;
+          animation: 15s slidy infinite;
   display: flex;
   flex-wrap: wrap;
 }
@@ -274,10 +323,12 @@ div.slider div figcaption {
 
 .appeleScroll {
   position: absolute;
+  margin-left: -35px;
   left: 50%;
   top: 60vw;
   transform: translateX(-50%);
-  animation: 2s appeleScroll infinite;
+  -webkit-animation: 2s appeleScroll infinite;
+          animation: 2s appeleScroll infinite;
 }
 
 .sliderDroite {
@@ -349,6 +400,8 @@ footer a {
   border-radius: 10px;
   padding: 7.5px 12px;
   transition: 0.5s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
@@ -387,6 +440,8 @@ footer a {
 
 .lien {
   margin-bottom: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-left: 5%;
   padding-top: 20px;
@@ -408,6 +463,8 @@ footer a {
 .produitTexte h1 {
   width: 100%;
   text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -430,6 +487,8 @@ footer a {
   border-radius: 10px;
   padding: 7.5px 12px;
   transition: 0.5s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   padding: 3px !important;
@@ -462,6 +521,8 @@ opacity: 0;
 
 .popup p {
   color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 

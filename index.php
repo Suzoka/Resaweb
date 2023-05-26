@@ -37,7 +37,7 @@
             </div>
         </div>
         <h1 class="enTete">Fructus et legumina</h1>
-        <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="75px" class="appeleScroll"></a>
+        <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="70" class="appeleScroll"></a>
     </header>
 
     <h1 class="titre" id="contenu">En ce moment dans vos paniers</h1>
