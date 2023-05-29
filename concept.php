@@ -25,7 +25,7 @@
     <h1 class="top titre" id="top">Notre concept</h1>
 
     <p>
-        Fructus et legumina est une initiative de la ceuillette aux fleurs. <br>Le principe est simple : vous n'avez pas
+        Fructus et legumina est une initiative de la ceuillette Eiffel. <br>Le principe est simple : vous n'avez pas
         le temps de venir ceuillir nos fruits bio ? Alors reservez votre panier tout fait ! <br><br>Toutes les
         semaines, venez chercher votre panier remplis par notre équipe de fruits Bio et de saisons issus de notre ceuillette. <br><br> Que cela soit pour cuisiner ou manger seuls, nos fruits et légumes frais sont faits pour vous !
     </p>

@@ -26,7 +26,6 @@ function masquerPopup() {
 }
 
 function ajoutPanier() {
-    console.log("executé");
     let panier = JSON.parse(localStorage.getItem('panier'));
     let flag = false;
     if (panier == null) {

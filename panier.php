@@ -33,17 +33,62 @@ if (isset($_SESSION['panier'])) {
 
         <h1 class="top titre" id="top">Votre panier</h1>
 
-        <p>Résumé de votre panier :</p>
-        <ul>
-            <?php
-            foreach ($panier as $key => $element) {
-                $requete = "select * from `zarka_resaweb`.`203_formules` where id_formule = " . $element->produit;
-                $stmt = $db->query($requete);
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                echo ("<li>" . $result["nom_formule"] . " - " . $element->quantite . " - " . $result["prix"] * ($element->quantite) . "€</li>");
-            } ?>
-        </ul>
+        <div class="panier">
+            <div class="dansPanier">
+                <p>Résumé de votre panier :</p>
+                <ul>
+                    <?php
+                    $total = 0;
+                    foreach ($panier as $key => $element) {
+                        $requete = "select * from `zarka_resaweb`.`203_formules` where id_formule = " . $element->produit;
+                        $stmt = $db->query($requete);
+                        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                        $total += $result["prix"] * ($element->quantite);
+                        echo ("<li>" . $result["nom_formule"] . " x <select class = \"".$result["id_formule"]."\">");
+                        for (
+                            $i = 0;
+                            $i < $element->quantite;
+                            $i++
+                        ) {
+                            echo ("<option value=\"" . $i . "\">" . $i . "</option>");
+                        }
+                        echo ("<option value=\"" . $element->quantite . "\" selected=\"selected\">" . $element->quantite . "</option></select> - " . $result["prix"] * ($element->quantite) . "€</li>");
+                    } ?>
+                </ul>
+                <p>Total =
+                    <?= $total ?> €
+                </p>
+                </div>
+                <form action="addToDatabase.php" method="post">
+                    <h1 class="titre"> Finaliser ma commande </h1>
+                    <fieldset>
+                        <legend><span class="number">1</span> Vos informations personnels</legend>
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="nom" name="nom" autocomplete="family-name">
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="mail" autocomplete="email">
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="number">2</span> Autres informations</legend>
+                        <label for="jour">Je viens chercher mon panier le :</label>
+                        <select id="jour" name="jour">
+                            <option value="1">Lundi</option>
+                            <option value="2">Mardi</option>
+                            <option value="3">Mercredi</option>
+                            <option value="4">Jeudi</option>
+                            <option value="5">Vendredi</option>
+                        </select>
+                        <p class="label">Je paye :</p>
+                        <input type="radio" id="surPlace" value="0" name="payement"><label class="ligne" for="surPlace">Sur
+                            place</label><br>
+                        <input type="radio" id="maintenant" value="1" name="payement"><label class="ligne"
+                            for="maintenant">Maintenant, en ligne</label><br>
+                    </fieldset>
+                    <div><input type="submit" value="Confirmer mon achat" class="lienFormule"></input></div>
+                </form>
+        </div>
 
+    <script src="./script/updatePanier.js"></script>
     </body>
 
     </html>

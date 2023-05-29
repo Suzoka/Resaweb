@@ -30,8 +30,6 @@
         ?>
         <div class="lien"><a class="lienFormule" href="./catalogue.php">Retour au catalogue</a></div>
         <div class="produit">
-            <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
-                width="40%">
             <div class="produitTexte">
                 <h1 class="top titre" id="top">
                     <?= $result["nom_formule"]; ?>
@@ -60,13 +58,15 @@
                 }
                 ?>
             </div>
+            <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
+                width="40%">
         </div>
 
-        <div class="dansPanier">
+        <div class="dansPanier achat">
             <p>Ce panier peut contenir :</p>
             <ul>
                 <?php
-                $requete = "SELECT * FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient where fi.ext_id_formule = ". $result["id_formule"]." ORDER BY i.type ASC";
+                $requete = "SELECT * FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient where fi.ext_id_formule = " . $result["id_formule"] . " ORDER BY i.type ASC";
                 $stmt = $db->query($requete);
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($result as $key => $element) {

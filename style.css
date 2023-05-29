@@ -193,7 +193,7 @@ div.slider {
   position: relative;
   width: 500%;
   -webkit-animation: 15s slidy infinite;
-          animation: 15s slidy infinite;
+  animation: 15s slidy infinite;
   display: flex;
   flex-wrap: wrap;
 }
@@ -328,7 +328,7 @@ div.slider div figcaption {
   top: 60vw;
   transform: translateX(-50%);
   -webkit-animation: 2s appeleScroll infinite;
-          animation: 2s appeleScroll infinite;
+  animation: 2s appeleScroll infinite;
 }
 
 .sliderDroite {
@@ -362,7 +362,6 @@ footer a {
   margin-bottom: 50px;
 }
 
-/*Formules*/
 .allFormule {
   display: flex;
   justify-content: space-around;
@@ -388,7 +387,7 @@ footer a {
   align-items: center;
 }
 
-.formule h2{
+.formule h2 {
   font-family: Mynerve;
 }
 
@@ -418,6 +417,7 @@ footer a {
 
 .produit {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   padding: 20px;
   border: rgb(96, 96, 96) solid 1px;
@@ -427,7 +427,10 @@ footer a {
   border-radius: 10px;
   width: 90%;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 5%;
+  justify-content: center;
+  min-width: 390px;
+  margin-bottom: 20px;
 }
 
 .produit img {
@@ -454,6 +457,7 @@ footer a {
   justify-content: space-around;
   align-items: center;
   gap: 20px 0;
+  min-width: 350px;
 }
 
 .produitTexte>* {
@@ -496,13 +500,13 @@ footer a {
 }
 
 .visible {
-visibility: visible;
-opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .invisible {
-visibility: hidden;
-opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .popup {
@@ -562,6 +566,103 @@ opacity: 0;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.5);
   border-radius: 100px;
   background-color: #AAE273;
+}
+
+.panier{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+ul {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -10px;
+}
+
+.dansPanier {
+  background-color: #c1c7bf;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.achat {
+  min-width: 390px;
+  max-width: 400px;
+  margin-left: 5%;
+}
+
+
+form {
+  width: 45%;
+  min-width: 400px;
+  max-width: 500px;
+  padding: 20px;
+  padding-top: 1px;
+  background-color: #c1c7bf;
+  border-radius: 10px;
+}
+
+form input:not(input[type="radio"],form input[type="submit"]),
+form select {
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #eeefe8;
+  color: #454b43;
+  margin-bottom: 20px;
+}
+
+form input[type="radio"] {
+  margin: 0 4px 8px 0;
+}
+
+form fieldset {
+  margin-bottom: 10px;
+  border: none;
+}
+
+form legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form label.ligne {
+  display: inline;
+}
+
+form .number {
+  background-color: #AAE273;
+  color: black;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+form .label {
+  margin-bottom: 5px;
+}
+
+form .titre{
+  width: auto;
 }
 
 @media screen and (max-width: 795px) {
