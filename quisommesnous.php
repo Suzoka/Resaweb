@@ -22,9 +22,40 @@
         </nav>
     </header>
 
-    <h1 class="top titre" id="top">Qui sommes nous ?</h1>
+    <h1 class="top titre" id="top">Notre équipe</h1>
 
-    <p></p>
+    <div class="nouveautee impaire"><img
+            src="./photos/morgan.jpg" alt=""
+            width="50%">
+        <div class="texteNouveautee">
+            <h2>Morgan</h2>
+            <p>Il est a l'origine même de ce projet. Il a réussi après quelques mois à embarquer quelques amis, et ensemble, ils gèrent Fructus & Legumina d'une main de maître.</p>
+        </div>
+    </div>
+    <div class="nouveautee paire"><img
+            src="./photos/arthur.jpg" alt=""
+            width="50%">
+        <div class="texteNouveautee">
+            <h2>Arthur</h2>
+            <p>Il est là pour qu'il y ai une bonne ambiance lors de la remise des paniers. Diplomé en Coworking, il sait parfaitement comment ordonner les choses.</p>
+        </div>
+    </div>
+    <div class="nouveautee impaire"><img
+            src="./photos/idriss.jpg" alt=""
+            width="50%">
+        <div class="texteNouveautee">
+            <h2>Idriss</h2>
+            <p>Ce jeune homme est celui qui s'occupe de ceuillir les différents fruits et légumes, dans le but de remplir vos paniers. C'est aussi lui qui gère la comptabilité.</p>
+        </div>
+    </div>
+    <div class="nouveautee paire"><img
+            src="./photos/lou-anne.jpg" alt=""
+            width="50%">
+        <div class="texteNouveautee">
+            <h2>Lou-Anne</h2>
+            <p>Actuellement la seule femme du groupe, elle reste toujours calme et attentionnée. C'est elle qui s'occupe de la distribution des paniers et aide à la ceuillette.</p>
+        </div>
+    </div>
 
     <script src="./script/nav.js"></script>
 </body>

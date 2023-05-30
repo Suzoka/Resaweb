@@ -95,8 +95,7 @@
         </div>
     </div>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg'
-            alt='Aller au panier'></a>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
 
     <script src="./script/nav.js"></script>
     <script src="./script/ajoutPanier.js"></script>
