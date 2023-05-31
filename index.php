@@ -59,9 +59,8 @@
             $ingredient5 = $ingredient2;
             for ($i = 0; $i < 6; $i++) {
                 ?>
-                <div class="nouveautee"><img
-                        src="https://blog.lecomptoirdetoamasina.fr/wp-content/uploads/2022/12/Quest-ce-que-la-pomme.png"
-                        alt="" width="50%">
+                <div class="nouveautee">
+                    <img src="./photos/<?= $result[${"ingredient" . $i}]["id_ingredient"] ?>" alt="" width="50%">
                     <div class="texteNouveautee">
                         <h2>
                             <?= $result[${"ingredient" . $i}]["nom_ingredient"] ?>
@@ -88,8 +87,9 @@
         explicabo! Repudiandae, dolorem officiis?
     </p>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
-    <footer><a href="./mentionslegales.php">mentions légales</a></footer>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg'
+            alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
 
     <script src="./script/nav.js"></script>
     <script src="./script/slider.js"></script>

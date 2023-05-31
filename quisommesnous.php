@@ -22,7 +22,7 @@
         </nav>
     </header>
 
-    <h1 class="top titre" id="top">Notre équipe</h1>
+    <h1 class="top titre grand" id="top">Notre équipe</h1>
 
     <div class="nouveautee impaire"><img
             src="./photos/morgan.jpg" alt=""
@@ -57,7 +57,12 @@
         </div>
     </div>
 
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
+
     <script src="./script/nav.js"></script>
+    <script src="./script/lienPanier.js"></script>
+
 </body>
 
 </html>

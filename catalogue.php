@@ -52,9 +52,11 @@
         <?php } ?>
     </div>
 
-
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
 
     <script src="./script/nav.js"></script>
+    <script src="./script/lienPanier.js"></script>
 </body>
 
 </html>

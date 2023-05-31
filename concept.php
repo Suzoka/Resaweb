@@ -26,11 +26,15 @@
 
     <p>
         Fructus et legumina est une initiative de la ceuillette Eiffel. <br>Le principe est simple : vous n'avez pas
-        le temps de venir ceuillir nos fruits bio ? Alors reservez votre panier tout fait ! <br><br>Toutes les
-        semaines, venez chercher votre panier remplis par notre équipe de fruits Bio et de saisons issus de notre ceuillette. <br><br> Que cela soit pour cuisiner ou manger seuls, nos fruits et légumes frais sont faits pour vous !
+        le temps de venir ceuillir nos fruits bio&nbsp;? Alors reservez votre panier tout fait&nbsp;! <br><br>Toutes les
+        semaines, venez chercher votre panier remplis par notre équipe de fruits Bio et de saisons issus de notre ceuillette. <br><br> Que cela soit pour cuisiner ou manger seuls, nos fruits et légumes frais sont faits pour vous&nbsp;!
     </p>
 
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
+
     <script src="./script/nav.js"></script>
+    <script src="./script/lienPanier.js"></script>
 </body>
 
 </html>
