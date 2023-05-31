@@ -1,7 +1,5 @@
-document.querySelectorAll('select').forEach(function (element) {
-    element.addEventListener('change', function (e) {
-        console.log(e);
-
+document.querySelectorAll('dansPanier select').forEach(function (element) {
+    element.addEventListener('change', function () {
         let panier = JSON.parse(localStorage.getItem('panier'));
         panier.forEach(function (element2) {
             if (element2.produit == element.getAttribute('class')) {
