@@ -13,8 +13,16 @@ if (isset($_SESSION['panier']) && isset($_POST['mail']) && isset($_POST['nom']) 
             $stmt = $db->query($requete);
         }
     }
+    mail(
+        $_POST['mail'],
+        "Fructus & Legumina | Confirmation de votre commande",
+        "Votre commande chez Fructus & Legumina a bien été validée. Votre numéro de client est {$id}"
+    );
+    echo ("Votre commande a bien été validée. <br> Vous avez reçu un mail de confirmtion et allez être redirigé vers la page d'accueil dans quelques secondes.");
+    header("refresh:30;url=../index.php");
 } else {
     echo ("Une erreur est survenue, veuillez réessayer plus tard. <br> Vous allez être redirigés vers la page d'accueil dans quelques secondes.");
+    header("refresh:15;url=../index.php");
 }
 
 ?>
