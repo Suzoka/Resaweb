@@ -59,7 +59,7 @@ if (isset($_SESSION['panier'])) {
                     <?= $total ?> €
                 </p>
             </div>
-            <form action="./script/addToDatabase.php" method="post">
+            <form class="panier" action="./script/addToDatabase.php" method="post">
                 <h1 class="titre"> Finaliser ma commande </h1>
                 <fieldset>
                     <legend><span class="number">1</span> Vos informations personnels</legend>

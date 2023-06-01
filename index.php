@@ -60,7 +60,7 @@
             for ($i = 0; $i < 6; $i++) {
                 ?>
                 <div class="nouveautee">
-                    <img src="./photos/<?= $result[${"ingredient" . $i}]["id_ingredient"] ?>" alt="" width="50%">
+                    <img src="./photos/<?= $result[${"ingredient" . $i}]["id_ingredient"]?>.jpg" alt="" width="50%">
                     <div class="texteNouveautee">
                         <h2>
                             <?= $result[${"ingredient" . $i}]["nom_ingredient"] ?>

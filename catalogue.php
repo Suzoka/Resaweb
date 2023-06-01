@@ -24,11 +24,38 @@
 
     <h1 class="top titre marge" id="top">Nos formules</h1>
 
+    <label for="recherche">Que voulez vous manger ?</label>
+    <form class="searchBar" action="./recherche.php" method="post">
+        <input type="search" list="ingredients" id="recherche" name="recherche">
+        <input type="submit" value="Rechercher">
+    </form>
+
+    <datalist id="ingredients">
+        <?php
+        require('./bdconnect.php');
+        $requete = "SELECT * FROM `203_ingredients`";
+        $stmt = $db->query($requete);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($result as $key => $element) {
+            $ingredient = "Des " . str_replace("L'", "", str_replace("La", "", str_replace("Le", "", $element["nom_ingredient"])));
+            if (substr($ingredient, -1) != "x") {
+                if (substr($ingredient, -1) == "u") {
+                    $ingredient .= "x";
+                } else {
+                    $ingredient .= "s";
+                }
+            }
+            echo ("<option value=\"{$ingredient}\">");
+        }
+        ?>
+    </datalist>
+
+
     <div class="allFormule">
 
         <?php
         require('./bdconnect.php');
-        $requete = "SELECT * FROM `zarka_resaweb`.`203_formules` where periode = MONTH(NOW());";
+        $requete = "SELECT * FROM `203_formules` where periode = MONTH(NOW());";
         $stmt = $db->query($requete);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -52,7 +79,8 @@
         <?php } ?>
     </div>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg'
+            alt='Aller au panier'></a>
     <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
 
     <script src="./script/nav.js"></script>
