@@ -30,6 +30,7 @@ if (isset($_SESSION['panier']) && isset($_POST['mail']) && isset($_POST['nom']) 
         "Votre commande chez Fructus & Legumina a bien été validée. Votre numéro de client est le N°{$id}",
         'From: fructusetlegumina@zarka.butmmi.o2switch.site'
     );
+    unset($_SESSION['panier']);
     //Confirme à l'utilisateur que tout s'est bien passé puis le redirige vers la page d'accueil
     echo ("Votre commande a bien été validée. <br> Vous avez reçu un mail de confirmtion et allez être redirigé vers la page d'accueil dans quelques secondes.");
     header("refresh:15;url=../index.php");
@@ -40,3 +41,7 @@ if (isset($_SESSION['panier']) && isset($_POST['mail']) && isset($_POST['nom']) 
 }
 
 ?>
+    <!-- Reset le localStorage -->
+    <script>localStorage.clear();</script>
+</body>
+</html>

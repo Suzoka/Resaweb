@@ -1,3 +1,5 @@
+<!-- Stock les données envoyées par la requête AJAX dans une session du serveur (Fait par chat GPT) -->
+
 <?php
 // Démarrer la session
 session_start();
@@ -9,11 +11,5 @@ if(isset($_POST['panier'])) {
 
   // Stocker les données du panier dans la session
   $_SESSION['panier'] = $panier;
-
-  // Répondre avec un message de succès
-  echo 'Panier stocké avec succès';
-} else {
-  // Répondre avec un message d'erreur
-  echo 'Aucune donnée de panier reçue';
-}
+} 
 ?>

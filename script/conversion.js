@@ -4,6 +4,7 @@ var panierStringifie = localStorage.getItem('panier');
 // Transforme le contenu en tableau d'objets JavaScript
 var panier = JSON.parse(panierStringifie);
 
+//Requête AJAX pour envoyer les informations du localStorage à une autre page PHP (Fait pas chat GPT)
 var xhr = new XMLHttpRequest();
 xhr.open('POST', './script/stockerPanier.php', true);
 xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
