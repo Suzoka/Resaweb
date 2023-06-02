@@ -118,6 +118,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('./font/Roboto-LightItalic.woff2') format('woff2'),
+    url('./font/Roboto-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
 *,
 *::before,
 *::after {
@@ -321,13 +329,14 @@ div.slider div figcaption {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50%;
 }
 
 .appeleScroll {
   position: absolute;
   margin-left: -35px;
   left: 50%;
-  top: 60vw;
+  top: 50vw;
   transform: translateX(-50%);
   -webkit-animation: 2s appeleScroll infinite;
   animation: 2s appeleScroll infinite;
@@ -618,6 +627,7 @@ form.panier {
   background-color: #c1c7bf;
   border-radius: 10px;
   margin-bottom: 25px;
+  flex-direction: column  ;
 }
 
 form.panier input:not(input[type="radio"],form.panier input[type="submit"]),
@@ -731,6 +741,12 @@ input[type="search"] {
   margin-left: 20px;
 }
 
+.required{
+  color: rgb(224, 30, 30);
+  font-weight: 300;
+  font-style: italic;
+}
+
 @media screen and (max-width: 795px) {
   .enTete {
     top: 20vw;
@@ -740,9 +756,5 @@ input[type="search"] {
 @media screen and (min-width: 1500px) {
   .enTete {
     top: 12vw;
-  }
-
-  .appeleScroll {
-    top: 50vw;
   }
 }

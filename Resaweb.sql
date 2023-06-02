@@ -157,12 +157,28 @@ values
         1,
         "Elles ont le pouvoir de diminuer le taux d'homocystéine dans le sang et limitent également les risques de cancers."
     ),
+    (
+        "La tomatte",
+        0,
+        2,
+        "Ce fruit est souvet compté comme un légume, et est consommé comme tel, c'est pourquoi nous la retrouvons dans nos paniers de légume."
+    ),
     ("Le poireau", 1, 4, ""),
     ("L'aubergine", 1, 2, ""),
-    ("La betterave", 1, 2, ""),
+    (
+        "La betterave",
+        1,
+        2,
+        "Très prisée par les grands chefs, la betterave a un goût sucré également aprécié par les enfants."
+    ),
     ("L'abricot", 0, 2, ""),
     ("La framboise", 0, 2, ""),
-    ("La mirabelle", 0, 2, ""),
+    (
+        "La mirabelle",
+        0,
+        2,
+        "Fruit sucré et savoureux qui se mange aussi bien seul que cuisiné en tarte, ou même en confiture."
+    ),
     ("La figue", 0, 3, ""),
     ("Le concombre", 1, 2, "");
 

@@ -64,28 +64,29 @@ if (isset($_SESSION['panier'])) {
                 <h1 class="titre"> Finaliser ma commande </h1>
                 <fieldset>
                     <legend><span class="number">1</span> Vos informations personnels</legend>
-                    <label for="nom">Nom:</label>
-                    <input type="text" id="nom" name="nom" autocomplete="family-name">
-                    <label for="mail">Email:</label>
-                    <input type="email" id="mail" name="mail" autocomplete="email">
+                    <label for="nom">Nom<span class="required">*</span> :</label>
+                    <input type="text" id="nom" name="nom" autocomplete="family-name" required>
+                    <label for="mail">Email<span class="required">*</span> :</label>
+                    <input type="email" id="mail" name="mail" autocomplete="email" required>
                 </fieldset>
                 <fieldset>
                     <legend><span class="number">2</span> Autres informations</legend>
-                    <label for="jour">Je viens chercher mon panier le :</label>
-                    <select id="jour" name="jour">
+                    <label for="jour">Je viens chercher mon panier le<span class="required">*</span> :</label>
+                    <select id="jour" name="jour" required>
                         <option value="1">Lundi</option>
                         <option value="2">Mardi</option>
                         <option value="3">Mercredi</option>
                         <option value="4">Jeudi</option>
                         <option value="5">Vendredi</option>
                     </select>
-                    <p class="label">Je paye :</p>
-                    <input type="radio" id="surPlace" value="0" name="payement"><label class="ligne" for="surPlace">Sur
+                    <p class="label">Je paye<span class="required">*</span> :</p>
+                    <input type="radio" id="surPlace" value="0" name="payement" required><label class="ligne" for="surPlace">Sur
                         place</label><br>
                     <input type="radio" id="maintenant" value="1" name="payement"><label class="ligne"
                         for="maintenant">Maintenant, en ligne</label><br>
                 </fieldset>
                 <div><input type="submit" value="Confirmer mon achat" class="lienFormule"></input></div>
+                <span class="required">*Champs obligatoires</span>
             </form>
         </div>
 
