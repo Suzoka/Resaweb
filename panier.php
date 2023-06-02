@@ -45,7 +45,7 @@ if (isset($_SESSION['panier'])) {
                         $stmt = $db->query($requete);
                         $result = $stmt->fetch(PDO::FETCH_ASSOC);
                         $total += $result["prix"] * ($element->quantite);
-                        echo ("<li>" . $result["nom_formule"] . " x <select class = \"" . $result["id_formule"] . "\">");
+                        echo ("<li>" . $result["nom_formule"] . " x <select class = \"quantite " . $result["id_formule"] . "\">");
                         for (
                             $i = 0;
                             $i < $element->quantite;
@@ -92,8 +92,8 @@ if (isset($_SESSION['panier'])) {
 
 
         <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
-        <script src="./script/updatePanier.js"></script>
         <script src="./script/nav.js"></script>
+        <script src="./script/updatePanier.js"></script>
     </body>
 
     </html>
