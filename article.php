@@ -24,7 +24,7 @@
     <?php
     if ($_GET['id']) {
         require('./bdconnect.php');
-        $requete = "SELECT * FROM `zarka_resaweb`.`203_formules` where id_formule = " . $_GET['id'] . ";";
+        $requete = "SELECT * FROM `203_formules` where id_formule = " . $_GET['id'] . ";";
         $stmt = $db->query($requete);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         ?>
@@ -70,7 +70,7 @@
                 $stmt = $db->query($requete);
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($result as $key => $element) {
-                    $ingredient = "Des " . str_replace("L'", "", str_replace("La", "", str_replace("Le", "", $element["nom_ingredient"])));
+                    $ingredient = "Des " . str_replace("L'", "", str_replace("La ", "", str_replace("Le ", "", $element["nom_ingredient"])));
                     if (substr($ingredient, -1) != "x") {
                         if (substr($ingredient, -1) == "u") {
                             $ingredient .= "x";

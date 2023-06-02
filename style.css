@@ -393,6 +393,7 @@ footer a {
   flex-direction: column;
   align-items: center;
   margin-bottom: 18px;
+  justify-content: space-between;
 }
 
 .formule h2 {
@@ -503,7 +504,7 @@ footer a {
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
-  padding: 3px !important;
+  padding: 8px !important;
   font-size: 1.05rem;
 }
 
@@ -709,6 +710,7 @@ input[type="search"] {
   margin-bottom: 25px;
   margin-left: 30%;
   display: block;
+  z-index: 2;
 }
 
 .searchBar{
@@ -723,7 +725,10 @@ input[type="search"] {
   border-radius: 100px;
   text-align: right;
   transform: translate(-30%, -1px);
-  z-index: -1;
+}
+
+.disponibilite{
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 795px) {

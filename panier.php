@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fructus & legumina - Panier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <?php
 // Démarrer la session
 session_start();
@@ -8,16 +19,6 @@ if (isset($_SESSION['panier'])) {
     $panier = json_decode($_SESSION['panier']);
     require('./bdconnect.php');
     ?>
-    <!DOCTYPE html>
-    <html lang="fr">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fructus & legumina - Panier</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
     <body>
         <header>
@@ -101,15 +102,3 @@ if (isset($_SESSION['panier'])) {
     echo ("<p>Une erreur est survenue, veuillez réessayer plus tard.</p> <a href='./index.php'>Retourner sur la page d'accueil</a>");
 }
 ?>
-
-
-
-
-
-
-
-
-
-<!-- ! Une fois la commande validée
-// Effacer les données du panier de la session si nécessaire
-//   unset($_SESSION['panier']); -->
