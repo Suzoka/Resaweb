@@ -17,8 +17,6 @@ document.querySelectorAll('select.quantite').forEach(function (element) {
         //On met à jour le panier
         localStorage.setItem('panier', JSON.stringify(panier));
         //On redirige vers la page de redirection du panier
-        setTimeout(function () {
         window.location.replace("./redirectionPanier.php");
-        }, 5000);
     })
 })
