@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fructus et legumina - Confirmation panier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 //Démarre la session
 session_start();
@@ -33,11 +43,11 @@ if (isset($_SESSION['panier']) && isset($_POST['mail']) && isset($_POST['nom']) 
     unset($_SESSION['panier']);
     //Confirme à l'utilisateur que tout s'est bien passé puis le redirige vers la page d'accueil
     echo ("Votre commande a bien été validée. <br> Vous avez reçu un mail de confirmtion et allez être redirigé vers la page d'accueil dans quelques secondes.");
-    header("refresh:15;url=../index.php");
+    header("refresh:10;url=../index.php");
 //Si il manque des données, affiche un message d'erreur et redirige vers la page d'accueil
 } else {
     echo ("Une erreur est survenue, veuillez réessayer plus tard. <br> Vous allez être redirigés vers la page d'accueil dans quelques secondes.");
-    header("refresh:10;url=../index.php");
+    header("refresh:5;url=../index.php");
 }
 
 ?>

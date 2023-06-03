@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commandez votre panier</title>
+    <title>Fructus et legumina - Catalogue</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./photos/favicon.svg" type="image/svg+xml">
 </head>
@@ -24,10 +24,12 @@
 
     <h1 class="top titre marge" id="top">Nos formules</h1>
 
-    <label for="recherche">Que voulez vous manger ?</label>
-    <form class="searchBar" action="./recherche.php" method="post">
-        <input type="search" list="ingredients" id="recherche" name="recherche">
-        <input type="submit" value="Rechercher">
+    <form action="./recherche.php" method="post">
+        <label for="recherche">Que voulez vous manger ?</label>
+        <div class="searchBar">
+            <input type="search" list="ingredients" id="recherche" name="recherche">
+            <input type="submit" value="Rechercher">
+        </div>
     </form>
 
     <datalist id="ingredients">

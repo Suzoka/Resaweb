@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fructus et legumina | Recherche</title>
+    <title>Fructus et legumina - Recherche</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -48,7 +48,11 @@
                 </p>
                 <a class="lienFormule" href="./article.php?id=<?= $element['id_formule']; ?>">Commandez maintenant</a>
             </div>
-        <?php } ?>
+        <?php } 
+        if (empty($result)) { 
+            echo("<p class='aucunResultat'>Aucune formule contenant cet ingredient n'est disponible.</p>");
+        }
+        ?>
     </div>
 
 
