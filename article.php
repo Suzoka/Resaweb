@@ -59,8 +59,15 @@
                 }
                 ?>
             </div>
-            <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
-                width="40%">
+            <img src="<?php if (strstr($result['nom_formule'], "Fruits et légumes")) {
+                echo ("./photos/panier-fruit-legume.jpg");
+            } else if (strstr($result['nom_formule'], "Fruits")) {
+                echo ("./photos/panier-fruit.jpg");
+            } else if (strstr($result['nom_formule'], "Légumes")) {
+                echo ("./photos/panier-legume.jpg");
+            } else {
+                echo ("./photos/interogation.png");
+            } ?>" alt="" width="50%">
         </div>
 
         <div class="dansPanier achat">
@@ -70,8 +77,8 @@
                 $requete = "SELECT * FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient where fi.ext_id_formule = " . $result["id_formule"] . " ORDER BY i.type ASC";
                 $stmt = $db->query($requete);
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                foreach ($result as $key => $element) {
-                    $ingredient = "Des " . str_replace("L'", "", str_replace("La ", "", str_replace("Le ", "", $element["nom_ingredient"])));
+                foreach ($result as $key => $result) {
+                    $ingredient = "Des " . str_replace("L'", "", str_replace("La ", "", str_replace("Le ", "", $result["nom_ingredient"])));
                     if (substr($ingredient, -1) != "x") {
                         if (substr($ingredient, -1) == "u") {
                             $ingredient .= "x";
@@ -83,6 +90,7 @@
                 }
                 ?>
             </ul>
+            <p class="italic">Photo non contractuelle</p>
         </div>
     <?php } else {
         header('Location: ./catalogue.php');
@@ -96,9 +104,10 @@
         </div>
     </div>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg' alt='Aller au panier'></a>
+    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg'
+            alt='Aller au panier'></a>
     <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
-    
+
     <script src="./script/nav.js"></script>
     <script src="./script/ajoutPanier.js"></script>
     <script src="./script/lienPanier.js"></script>

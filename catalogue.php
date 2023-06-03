@@ -68,8 +68,16 @@
                 <h2>
                     <?= $element['nom_formule']; ?>
                 </h2>
-                <img src="https://www.maison-leroy.fr/wp-content/uploads/2020/11/panier_fruits-1900x1425.png" alt=""
-                    width="100%">
+                <img src="<?php if (strstr($element['nom_formule'], "Fruits et légumes")) {
+                    echo ("./photos/panier-fruit-legume.jpg");
+                } else if (strstr($element['nom_formule'], "Fruits")) {
+                    echo ("./photos/panier-fruit.jpg");
+                } else if (strstr($element['nom_formule'], "Légumes")) {
+                    echo ("./photos/panier-legume.jpg");
+                } else {
+                    echo ("./photos/interogation.png");
+                } ?>"
+                    alt="" width="100%">
                 <p>
                     <?= $element['description_formule']; ?>
                 </p>
