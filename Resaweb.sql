@@ -163,24 +163,54 @@ values
         2,
         "Ce fruit est souvet compté comme un légume, et est consommé comme tel, c'est pourquoi nous la retrouvons dans nos paniers de légume."
     ),
-    ("Le poireau", 1, 4, ""),
-    ("L'aubergine", 1, 2, ""),
+    (
+        "Le poireau",
+        1,
+        4,
+        "Un certain canard vous dira surement que c'est un artichaud, mais non ! C'est bien un poireau !"
+    ),
+    (
+        "L'aubergine",
+        1,
+        2,
+        "Ce légume se prête à tous types de cuisson et accompagne à merveille tous vos petits plats !"
+    ),
     (
         "La betterave",
         1,
         2,
         "Très prisée par les grands chefs, la betterave a un goût sucré également aprécié par les enfants."
     ),
-    ("L'abricot", 0, 2, ""),
-    ("La framboise", 0, 2, ""),
+    (
+        "L'abricot",
+        0,
+        2,
+        "C'est un fruit qui est très bon pour la croissance et laprotection des os, grâce à son fort apport en bêta carotène"
+    ),
+    (
+        "La framboise",
+        0,
+        2,
+        "Ce petit fruit rouge présente un apport calorique modéré : avec elle, alliez plaisir en bouche et bien-être !"
+    ),
     (
         "La mirabelle",
         0,
         2,
         "Fruit sucré et savoureux qui se mange aussi bien seul que cuisiné en tarte, ou même en confiture."
     ),
-    ("La figue", 0, 3, ""),
-    ("Le concombre", 1, 2, "");
+    (
+        "La figue",
+        0,
+        3,
+        "La figue est un festival de couleurs et de saveurs ! Blanche, noire, rouge, violette ou bicolore, elle reste avant tout un fruit gourmand et gorgé de soleil"
+    ),
+    (
+        "Le concombre",
+        1,
+        2,
+        "Très frais et hydratant, c'est le légume parfait pour les étés chauds."
+    );
 
 Insert into
     `zarka_resaweb`.`203_formules` (
