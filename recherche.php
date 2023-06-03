@@ -25,9 +25,9 @@
     <h1 class="top titre" id="top">Votre panier</h1>
 
     <?php
-    $ingredient = substr($_POST['recherche'], 4, -1);
+    $ingredient = str_replace("Des ", "",substr($_POST['recherche'], 0, -1));
     require('./bdconnect.php');
-    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like '%{$ingredient}' AND f.periode = MONTH(NOW());";
+    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like '%{$ingredient}%' AND f.periode = MONTH(NOW());";
     $stmt = $db->query($requete);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
@@ -59,14 +59,14 @@
             </div>
         <?php } 
         if (empty($result)) { 
-            echo("<p class='aucunResultat'>Aucune formule contenant cet ingredient n'est disponible.</p>");
+            echo("<p class='aucunResultat'>Aucune formule contenant cet ingredient n'est actuellement disponible.</p>");
         }
         ?>
     </div>
 
 
     <?php
-    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like '%{$ingredient}' AND f.periode != MONTH(NOW());";
+    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like '%{$ingredient}%' AND f.periode != MONTH(NOW());";
     $stmt = $db->query($requete);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
