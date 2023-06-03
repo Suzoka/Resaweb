@@ -12,8 +12,8 @@
 <?php
 //Démarre la session
 session_start();
-//Vérifie si les données nécessaires sont présentes
-if (isset($_SESSION['panier']) && isset($_POST['mail']) && isset($_POST['nom']) && isset($_POST['jour']) && isset($_POST['payement'])) {
+//Vérifie si les données nécessaires sont présentes et que le panier n'est pas vide
+if (isset($_SESSION['panier']) && isset($_POST['mail']) && isset($_POST['nom']) && isset($_POST['jour']) && isset($_POST['payement']) && count(json_decode($_SESSION['panier'])) != 0) {
     //Récupère les données du panier depuis la session
     $panier = json_decode($_SESSION['panier']);
 
