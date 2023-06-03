@@ -12,13 +12,16 @@
 
 <body>
     <header>
-        <a href="#navigation" class="skip-link">Aller à la barre de navigation</a>
-        <a href="#contenu" class="skip-link">Aller au contenu</a>
+        <a href="#navigation" class="skip-link" title="Lien pour aller à la barre de navigation">Aller à la barre de
+            navigation</a>
+        <a href="#top" class="skip-link" title="Lien pour aller au contenu">Aller au contenu</a>
         <nav id="navigation">
-            <a href="./index.php" class="logo"><img src="./photos/logo.svg" alt="Accueil"></a>
-            <a href="./concept.php">Le concept</a>
-            <a href="./catalogue.php">Commandez votre panier&nbsp;!</a>
-            <a href="./quisommesnous.php">Qui sommes nous&nbsp;?</a>
+            <a href="./index.php" class="logo" title="Lien pour aller vers l'accueil"><img src="./photos/logo.svg"
+                    alt="Accueil"></a>
+            <a href="./concept.php" title="Lien pour aller à la page concept">Le concept</a>
+            <a href="./catalogue.php" title="Lien pour aller au catalogue">Commandez votre panier&nbsp;!</a>
+            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes
+                nous&nbsp;?</a>
         </nav>
         <div class="captioned-gallery" id="top">
             <div class="slider">
@@ -37,7 +40,7 @@
             </div>
         </div>
         <h1 class="enTete">Fructus et legumina</h1>
-        <a href="#contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="70" class="appeleScroll"></a>
+        <a href="#contenu" title="Lien pour aller au contenu"><img src="./photos/fleche.svg" alt="Aller au contenu" width="70" class="appeleScroll"></a>
     </header>
 
     <h1 class="titre" id="contenu">En ce moment dans vos paniers</h1>
@@ -60,7 +63,7 @@
             for ($i = 0; $i < 6; $i++) {
                 ?>
                 <div class="nouveautee">
-                    <img src="./photos/<?= $result[${"ingredient" . $i}]["id_ingredient"]?>.jpg" alt="" width="50%">
+                    <img src="./photos/<?= $result[${"ingredient" . $i}]["id_ingredient"] ?>.jpg" alt="" width="50%">
                     <div class="texteNouveautee">
                         <h2>
                             <?= $result[${"ingredient" . $i}]["nom_ingredient"] ?>
@@ -87,9 +90,9 @@
         explicabo! Repudiandae, dolorem officiis?
     </p>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible'><img src='./photos/panier.svg'
+    <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img src='./photos/panier.svg'
             alt='Aller au panier'></a>
-    <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
+    <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>
 
     <script src="./script/nav.js"></script>
     <script src="./script/slider.js"></script>

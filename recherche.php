@@ -55,7 +55,7 @@
                 <p class="prix">
                     <?= $element['prix']; ?>€
                 </p>
-                <a class="lienFormule" href="./article.php?id=<?= $element['id_formule']; ?>">Commandez maintenant</a>
+                <a class="lienFormule" href="./article.php?id=<?= $element['id_formule']; ?>" title="Lien vers la page de l'article">Commandez maintenant</a>
             </div>
         <?php } 
         if (empty($result)) { 
@@ -94,13 +94,16 @@
                 <p class="prix">
                     <?= $element['prix']; ?>€
                 </p>
-                <a class="indisponible" href="./article.php?id=<?= $element['id_formule']; ?>">Indisponible</a>
+                <a class="indisponible" href="./article.php?id=<?= $element['id_formule']; ?> Lien vers la page de l'article">Indisponible</a>
             </div>
         <?php } ?>
     </div>
 
-    <footer><a href="./mentionslegales.php">Mentions légales</a><a href="./planSite.php">Plan du site</a></footer>
+    <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img src='./photos/panier.svg'
+            alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>    
     <script src="./script/nav.js"></script>
+    <script src="./script/lienPanier.js"></script>
 </body>
 
 </html>
