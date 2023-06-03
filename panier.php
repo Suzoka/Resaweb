@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fructus & legumina - Panier</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./photos/favicon.svg" type="image/svg+xml">
 </head>
 
 <?php
