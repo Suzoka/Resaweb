@@ -308,6 +308,7 @@ div.slider div figcaption {
   display: flex;
   align-items: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .nouveautee h2 {
@@ -760,6 +761,15 @@ input[type="search"] {
 
 .listePuce h2{
   margin-left: 20%;
+}
+
+.concept{
+  width: 45%;
+  margin-bottom: 30px;
+}
+
+.center{
+  text-align: center;
 }
 
 @media screen and (max-width: 795px) {
