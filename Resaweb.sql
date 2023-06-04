@@ -785,12 +785,3 @@ values
     (27, 20),
     (29, 26),
     (30, 26);
-
-SELECT
-    DISTINCT i.*
-FROM
-    `zarka_resaweb`.`203_ingredients` i
-    inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient
-    inner join `zarka_resaweb`.`203_formules` f on fi.ext_id_formule = f.id_formule
-WHERE
-    f.periode = MONTH(NOW());
