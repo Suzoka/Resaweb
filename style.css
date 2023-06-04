@@ -754,6 +754,14 @@ input[type="search"] {
   color: black;
 }
 
+.ml{
+  width: 80%;
+}
+
+.listePuce h2{
+  margin-left: 20%;
+}
+
 @media screen and (max-width: 795px) {
   .enTete {
     top: 20vw;
