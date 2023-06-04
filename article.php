@@ -12,24 +12,30 @@
 
 <body>
     <header>
-        <a href="#navigation" class="skip-link" title="Lien pour aller à la barre de navigation">Aller à la barre de navigation</a>
+        <a href="#navigation" class="skip-link" title="Lien pour aller à la barre de navigation">Aller à la barre de
+            navigation</a>
         <a href="#top" class="skip-link" title="Lien pour aller au contenu">Aller au contenu</a>
         <nav id="navigation">
-            <a href="./index.php" class="logo" title="Lien pour aller vers l'accueil"><img src="./photos/logo.svg" alt="Accueil"></a>
+            <a href="./index.php" class="logo" title="Lien pour aller vers l'accueil"><img src="./photos/logo.svg"
+                    alt="Accueil"></a>
             <a href="./concept.php" title="Lien pour aller à la page concept">Le concept</a>
             <a href="./catalogue.php" title="Lien pour aller au catalogue">Commandez votre panier&nbsp;!</a>
-            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes nous&nbsp;?</a>
+            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes
+                nous&nbsp;?</a>
         </nav>
     </header>
 
     <?php
     if ($_GET['id']) {
         require('./bdconnect.php');
-        $requete = "SELECT * FROM `203_formules` where id_formule = " . $_GET['id'] . ";";
-        $stmt = $db->query($requete);
+        $requete = "SELECT * FROM `203_formules` where id_formule = :id;";
+        $stmt = $db->prepare($requete);
+        $stmt->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
+        $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         ?>
-        <div class="lien"><a class="lienFormule" href="./catalogue.php" title="Lien pour retourner au catalogue">Retour au catalogue</a></div>
+        <div class="lien"><a class="lienFormule" href="./catalogue.php" title="Lien pour retourner au catalogue">Retour au
+                catalogue</a></div>
         <div class="produit">
             <div class="produitTexte">
                 <h1 class="top titre" id="top">
@@ -74,11 +80,13 @@
             <p>Ce panier peut contenir :</p>
             <ul>
                 <?php
-                $requete = "SELECT * FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient where fi.ext_id_formule = " . $result["id_formule"] . " ORDER BY i.type ASC";
-                $stmt = $db->query($requete);
+                $requete = "SELECT * FROM `zarka_resaweb`.`203_ingredients` i inner join `zarka_resaweb`.`203_ingredients_formule` fi on i.id_ingredient = fi.ext_id_ingredient where fi.ext_id_formule = :idFormule ORDER BY i.type ASC";
+                $stmt = $db->prepare($requete);
+                $stmt->bindValue(':idFormule', $result["id_formule"], PDO::PARAM_INT);
+                $stmt->execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                foreach ($result as $key => $result) {
-                    $ingredient = "Des " . str_replace("L'", "", str_replace("La ", "", str_replace("Le ", "", $result["nom_ingredient"])));
+                foreach ($result as $key => $element) {
+                    $ingredient = "Des " . str_replace("L'", "", str_replace("La ", "", str_replace("Le ", "", $element["nom_ingredient"])));
                     if (substr($ingredient, -1) != "x") {
                         if (substr($ingredient, -1) == "u") {
                             $ingredient .= "x";
@@ -104,9 +112,10 @@
         </div>
     </div>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img src='./photos/panier.svg'
-            alt='Aller au panier'></a>
-    <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>
+    <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img
+            src='./photos/panier.svg' alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a
+            href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>
 
     <script src="./script/nav.js"></script>
     <script src="./script/ajoutPanier.js"></script>

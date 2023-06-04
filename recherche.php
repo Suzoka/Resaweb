@@ -25,10 +25,12 @@
     <h1 class="top titre" id="top">Votre panier</h1>
 
     <?php
-    $ingredient = str_replace("Des ", "",substr($_POST['recherche'], 0, -1));
+    $ingredient = str_replace("Des ", "", substr($_POST['recherche'], 0, -1));
     require('./bdconnect.php');
-    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like '%{$ingredient}%' AND f.periode = MONTH(NOW());";
-    $stmt = $db->query($requete);
+    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like :nom AND f.periode = MONTH(NOW());";
+    $stmt = $db->prepare($requete);
+    $stmt->bindValue(':nom', '%' . $ingredient . '%', PDO::PARAM_STR);
+    $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
@@ -47,27 +49,29 @@
                     echo ("./photos/panier-legume.jpg");
                 } else {
                     echo ("./photos/interogation.png");
-                } ?>"
-                    alt="" width="100%">
+                } ?>" alt="" width="100%">
                 <p>
                     <?= $element['description_formule']; ?>
                 </p>
                 <p class="prix">
                     <?= $element['prix']; ?>€
                 </p>
-                <a class="lienFormule" href="./article.php?id=<?= $element['id_formule']; ?>" title="Lien vers la page de l'article">Commandez maintenant</a>
+                <a class="lienFormule" href="./article.php?id=<?= $element['id_formule']; ?>"
+                    title="Lien vers la page de l'article">Commandez maintenant</a>
             </div>
-        <?php } 
-        if (empty($result)) { 
-            echo("<p class='aucunResultat'>Aucune formule contenant cet ingredient n'est actuellement disponible.</p>");
+        <?php }
+        if (empty($result)) {
+            echo ("<p class='aucunResultat'>Aucune formule contenant cet ingredient n'est actuellement disponible.</p>");
         }
         ?>
     </div>
 
 
     <?php
-    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like '%{$ingredient}%' AND f.periode != MONTH(NOW());";
-    $stmt = $db->query($requete);
+    $requete = "SELECT * FROM `203_formules` f inner join `203_ingredients_formule` fi on fi.ext_id_formule = f.id_formule inner join `203_ingredients` i on fi.ext_id_ingredient = i.id_ingredient where i.nom_ingredient like :nom AND f.periode != MONTH(NOW());";
+    $stmt = $db->prepare($requete);
+    $stmt->bindValue(':nom', '%' . $ingredient . '%', PDO::PARAM_STR);
+    $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
@@ -86,22 +90,23 @@
                     echo ("./photos/panier-legume.jpg");
                 } else {
                     echo ("./photos/interogation.png");
-                } ?>"
-                    alt="" width="100%">
+                } ?>" alt="" width="100%">
                 <p>
                     <?= $element['description_formule']; ?>
                 </p>
                 <p class="prix">
                     <?= $element['prix']; ?>€
                 </p>
-                <a class="indisponible" href="./article.php?id=<?= $element['id_formule']; ?> Lien vers la page de l'article">Indisponible</a>
+                <a class="indisponible"
+                    href="./article.php?id=<?= $element['id_formule']; ?> Lien vers la page de l'article">Indisponible</a>
             </div>
         <?php } ?>
     </div>
 
-    <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img src='./photos/panier.svg'
-            alt='Aller au panier'></a>
-    <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>    
+    <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img
+            src='./photos/panier.svg' alt='Aller au panier'></a>
+    <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a
+            href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>
     <script src="./script/nav.js"></script>
     <script src="./script/lienPanier.js"></script>
 </body>

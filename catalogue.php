@@ -56,7 +56,6 @@
     <div class="allFormule">
 
         <?php
-        require('./bdconnect.php');
         $requete = "SELECT * FROM `203_formules` where periode = MONTH(NOW());";
         $stmt = $db->query($requete);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

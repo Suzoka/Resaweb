@@ -45,8 +45,10 @@ if (isset($_SESSION['panier'])) {
                     <?php
                     $total = 0;
                     foreach ($panier as $key => $element) {
-                        $requete = "select * from `zarka_resaweb`.`203_formules` where id_formule = " . $element->produit;
-                        $stmt = $db->query($requete);
+                        $requete = "select * from `zarka_resaweb`.`203_formules` where id_formule = :id";
+                        $stmt = $db->prepare($requete);
+                        $stmt->bindValue(':id', $element->produit, PDO::PARAM_INT);
+                        $stmt->execute();
                         $result = $stmt->fetch(PDO::FETCH_ASSOC);
                         $total += $result["prix"] * ($element->quantite);
                         echo ("<li>" . $result["nom_formule"] . " x <select class = \"quantite " . $result["id_formule"] . "\">");
@@ -98,7 +100,7 @@ if (isset($_SESSION['panier'])) {
 
         <footer><a href="./mentionslegales.php" title="Lien pour aller aux mentions légales">Mentions légales</a><a
                 href="./planSite.php" title="Lien pour aller au plan du site">Plan du site</a></footer>
-                
+
         <script src="./script/nav.js"></script>
         <script src="./script/updatePanier.js"></script>
     </body>
