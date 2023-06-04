@@ -26,7 +26,7 @@
     </header>
 
     <?php
-    if ($_GET['id']) {
+    if (isset($_GET['id'])) {
         require('./bdconnect.php');
         $requete = "SELECT * FROM `203_formules` where id_formule = :id;";
         $stmt = $db->prepare($requete);
