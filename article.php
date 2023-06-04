@@ -20,8 +20,7 @@
                     alt="Accueil"></a>
             <a href="./concept.php" title="Lien pour aller à la page concept">Le concept</a>
             <a href="./catalogue.php" title="Lien pour aller au catalogue">Commandez votre panier&nbsp;!</a>
-            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes
-                nous&nbsp;?</a>
+            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes-nous&nbsp;?</a>
         </nav>
     </header>
 
@@ -34,8 +33,7 @@
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         ?>
-        <div class="lien"><a class="lienFormule" href="./catalogue.php" title="Lien pour retourner au catalogue">Retour au
-                catalogue</a></div>
+        <div class="lien"><a class="lienFormule" href="./catalogue.php" title="Lien pour retourner au catalogue">Retour au catalogue</a></div>
         <div class="produit">
             <div class="produitTexte">
                 <h1 class="top titre" id="top">
@@ -98,7 +96,7 @@
                 }
                 ?>
             </ul>
-            <p class="italic">Photo non contractuelle</p>
+            <p class="italic">Photo non contractuelle.</p>
         </div>
     <?php } else {
         header('Location: ./catalogue.php');

@@ -20,8 +20,7 @@
                     alt="Accueil"></a>
             <a href="./concept.php" title="Lien pour aller à la page concept">Le concept</a>
             <a href="./catalogue.php" title="Lien pour aller au catalogue">Commandez votre panier&nbsp;!</a>
-            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes
-                nous&nbsp;?</a>
+            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes-nous&nbsp;?</a>
         </nav>
     </header>
 
@@ -39,12 +38,11 @@
         En réservant votre panier, vous vous assurez de bénéficier d'une variété de produits frais, prêts à être
         dégustés. Que vous soyez un passionné de cuisine à la recherche d'ingrédients de première qualité pour vos
         recettes ou que vous souhaitiez simplement profiter de fruits et légumes savoureux dans le cadre de votre
-        alimentation quotidienne, nos paniers vous conviendrons.
+        alimentation quotidienne, nos paniers vous conviendront.
         <br><br>
         Nous croyons fermement en l'importance d'une alimentation saine et équilibrée pour le bien-être de chacun. C'est
         pourquoi nous mettons un point d'honneur à vous offrir des produits bio, cultivés sans aucun pesticides et
-        dans le respect de l'environnement. En choisissant Fructus et Legumina, vous faites un choix éclairé
-        pour votre santé et soutenez une agriculture durable.
+        dans le respect de l'environnement. En choisissant Fructus et Legumina, vous soutenez une agriculture durable.
         <br><br>
         Réservez dès maintenant votre panier de fruits et légumes chez Fructus et Legumina et découvrez la fraîcheur et
         la qualité de notre cueillette Eiffel. Offrez-vous le luxe de déguster des produits de saison, cultivés

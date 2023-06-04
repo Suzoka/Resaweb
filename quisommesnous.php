@@ -18,7 +18,7 @@
             <a href="./index.php" class="logo" title="Lien pour aller vers l'accueil"><img src="./photos/logo.svg" alt="Accueil"></a>
             <a href="./concept.php" title="Lien pour aller à la page concept">Le concept</a>
             <a href="./catalogue.php" title="Lien pour aller au catalogue">Commandez votre panier&nbsp;!</a>
-            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes nous&nbsp;?</a>
+            <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes-nous&nbsp;?</a>
         </nav>
     </header>
 

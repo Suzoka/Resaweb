@@ -83,7 +83,7 @@ values
         "La pomme",
         0,
         3,
-        "Ce fruit aurait des vertues qui réduisent les risques de cancers et le mauvais choléstérol."
+        "Ce fruit aurait des vertus qui réduisent les risques de cancers et le mauvais cholestérol."
     ),
     (
         "La poire",
@@ -107,31 +107,31 @@ values
         "La prune",
         0,
         1,
-        "La prune a pour effet de faciliter la gestion. Elle est une grande source de potassium, bon pour le corps."
+        "La prune a pour effet de faciliter la digestion. Elle est une grande source de potassium, bon pour le corps."
     ),
     (
         "La pêche",
         0,
         1,
-        "La pêche réduit les risques de maladis cardiovasculaire. Elle contient également beaucoup d'antioxydants."
+        "La pêche réduit les risques de maladies cardiovasculaires. Elle contient également beaucoup d'antioxydants."
     ),
     (
         "Le kiwi",
         0,
         1,
-        "Le kiwi est une grande source de fibres. Mais en plus de cela, il limite les risques de maladies cardiovasculaire et de  cancers."
+        "Le kiwi est une grande source de fibres. Mais en plus de cela, il limite les risques de maladies cardiovasculaires et de  cancers."
     ),
     (
         "Le choux",
         1,
         1,
-        "Remplie de multiples vitamines, le choux permet une bonne santé de la peau, des yeux, et des os, mais également de garder nos dents et gencives en bonne santée."
+        "Remplie de multiples vitamines, le choux permet une bonne santé de la peau, des yeux, et des os, mais également de garder nos dents et gencives en bonne santé."
     ),
     (
         "L'épinard",
         1,
         1,
-        "Popularisé par Popeï, l'épinard est une grande source de bétaïne, permettant d'avoir une meilleure endurance à l'effort physique."
+        "Popularisé par Popeye, l'épinard est une grande source de bétaïne, permettant d'avoir une meilleure endurance à l'effort physique."
     ),
     (
         "La cerise",
@@ -161,7 +161,7 @@ values
         "La tomatte",
         0,
         2,
-        "Ce fruit est souvet compté comme un légume, et est consommé comme tel, c'est pourquoi nous la retrouvons dans nos paniers de légume."
+        "Ce fruit est souvent compté comme un légume, et est consommé comme tel, c'est pourquoi nous la retrouvons dans nos paniers de légumes."
     ),
     (
         "Le poireau",
@@ -179,13 +179,13 @@ values
         "La betterave",
         1,
         2,
-        "Très prisée par les grands chefs, la betterave a un goût sucré également aprécié par les enfants."
+        "Très prisée par les grands chefs, la betterave a un goût sucré également apprécié par les enfants."
     ),
     (
         "L'abricot",
         0,
         2,
-        "C'est un fruit qui est très bon pour la croissance et laprotection des os, grâce à son fort apport en bêta carotène"
+        "C'est un fruit qui est très bon pour la croissance et la protection des os, grâce à son fort apport en bêta carotène"
     ),
     (
         "La framboise",

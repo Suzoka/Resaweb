@@ -31,8 +31,7 @@ if (isset($_SESSION['panier'])) {
                         alt="Accueil"></a>
                 <a href="./concept.php" title="Lien pour aller à la page concept">Le concept</a>
                 <a href="./catalogue.php" title="Lien pour aller au catalogue">Commandez votre panier&nbsp;!</a>
-                <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes
-                    nous&nbsp;?</a>
+                <a href="./quisommesnous.php" title="Lien pour aller à la page de présentation de l'équipe">Qui sommes-nous&nbsp;?</a>
             </nav>
         </header>
 
@@ -85,7 +84,7 @@ if (isset($_SESSION['panier'])) {
                         <option value="4">Jeudi</option>
                         <option value="5">Vendredi</option>
                     </select>
-                    <p class="label">Je paye<span class="required">*</span> :</p>
+                    <p class="label">Je paie<span class="required">*</span> :</p>
                     <input type="radio" id="surPlace" value="0" name="payement" required><label class="ligne"
                         for="surPlace">Sur
                         place</label><br>
