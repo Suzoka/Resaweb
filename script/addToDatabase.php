@@ -21,8 +21,13 @@
 
         //Connexion à la base de données
         require('../bdconnect.php');
-        $requete = "insert into `203_reservation` (email, nom_usr, jour, deja_paye) values ('{$_POST['mail']}', '{$_POST['nom']}', {$_POST['jour']}, {$_POST['payement']})";
-        $stmt = $db->query($requete);
+        $requete = "insert into `203_reservation` (email, nom_usr, jour, deja_paye) values (:mail, :nom, :jour, :payement)";
+        $stmt = $db->prepare($requete);
+        $stmt->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
+        $stmt->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR);
+        $stmt->bindValue(':jour', $_POST['jour'], PDO::PARAM_INT);
+        $stmt->bindValue(':payement', $_POST['payement'], PDO::PARAM_INT);
+        $stmt->execute();
 
         //Récupère l'id du dernier utilisateur ajouté
         $id = $db->lastInsertId();
