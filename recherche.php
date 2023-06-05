@@ -100,7 +100,10 @@
                     <a class="indisponible"
                         href="./article.php?id=<?= $element['id_formule']; ?> Lien vers la page de l'article">Indisponible</a>
                 </div>
-            <?php } ?>
+            <?php }
+            if (empty($result)) {
+                echo ("<p class='aucunResultat'>Aucune formule contenant cet ingredient n'a été trouvé.</p>");
+            } ?>
         </div>
 
         <a href='./redirectionPanier.php' class='lienPanier invisible' title="Lien pour aller au panier"><img
