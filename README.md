@@ -29,6 +29,10 @@ Installer le site en local :
 
 - Exécutez (`Ctrl + Entrée`).
 
+### Attention : 
+
+Si dans votre base de donnée vous avez une base de donnée s'appelant déjà `zarka_resaweb`, elle sera supprimée et remplacée par celle de ce site.
+
 
 ## Si vous souhaitez utiliser un autre compte que celui par défaut pour accéder à la base de donnée :
 
@@ -44,10 +48,6 @@ Installer le site en local :
 - Allez à l'adresse [localhost/resaweb](localhost/resaweb) dans votre navigateur pour arriver sur le site.
 
 - La page d'accueil du site s'ouvrira.
-
-### Attention : 
-
-Si dans votre base de donnée vous avez une base de donnée s'appelant déjà `zarka_resaweb`, elle sera supprimée et remplacée par celle de ce site.
 
 
 ### À noter :
