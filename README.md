@@ -13,7 +13,7 @@ Installer le site en local :
 - Déposer dans celui ci le dossier `resaweb` qui contient le code du site ainsi que le fichier de Base de Données.
 
 
-## Installer la Base de Données en Local :
+## Pour installer la Base de Données en Local :
 
 - Dans la barre d'URL de votre navigateur, tapez : [localhost/phpMyAdmin](localhost/phpMyAdmin).
 
@@ -29,10 +29,21 @@ Installer le site en local :
 
 - Exécutez (`Ctrl + Entrée`).
 
+
+## Si vous souhaitez utiliser un autre compte que celui par défaut pour accéder à la base de donnée :
+
+- Retournez dans le dossier `resaweb` qui se trouve dans `htdocs`.
+
+- Ouvrez le fichier `bdconnect.php` avec un éditeur de texte quelquonque.
+
+- Modifiez les lignes 2 et 3 avec le nom d'utilisateur et le mot de passe de votre compte.
+
+
+## Aller sur le site :
+
 - Allez à l'adresse [localhost/resaweb](localhost/resaweb) dans votre navigateur pour arriver sur le site.
 
 - La page d'accueil du site s'ouvrira.
-
 
 ### Attention : 
 
